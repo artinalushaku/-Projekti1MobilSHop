@@ -197,3 +197,495 @@ max-width: 100%;
     padding: 4px;
     color: #fff;
 }
+.sign button {
+    margin-top: 25px;
+    background-color: black;
+    color: rgb(255, 181, 44);
+}
+
+.sign button a {
+    color: rgb(255, 181, 44);
+
+}
+
+.sign .container {
+    padding-top: 30px;
+    background: linear-gradient(180deg, rgb(255, 181, 44), rgb(235, 220, 13));
+    padding-bottom: 30px;
+
+}
+
+.sign h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.offers {
+
+    /* margin-left: 20%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.first img {
+    width: 200px;
+    max-height: fit-content;
+    aspect-ratio: 4/4;
+}
+
+.first {
+    text-align: center;
+    background-color: white;
+    /* width: 30%; */
+    padding-bottom: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 24%;
+    align-items: center;
+}
+
+.first button:hover {
+    background-color: rgb(202, 135, 9);
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.first button {
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+    .first {
+        flex-basis: 16%;
+        justify-content: center;
+    }
+
+    .box {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+
+
+    .first {
+        flex-basis: 2%;
+        justify-content: center;
+    }
+
+    .first img {
+        width: 100px;
+    }
+
+}
+.Presentation{
+    background-image: url(Presentation1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+.Presentation .div-1{
+    flex-basis: 70%;
+}
+.Presentation .div-2{
+    align-self: center;
+    flex-basis: 30%;
+    color: white;
+
+}
+.Presentation h1{
+    font-size: 200px;
+    color: #fff;
+    /* padding-left: 20%; */
+}
+.Presentation h3{
+    font-size: 100px;
+    color: #fff;
+    padding-left: 20%
+}
+ .div-2 button{
+    display: inline-block;
+    background-color: transparent;
+    padding: 5px;
+    width: 200px;
+    border-radius: 20px;
+    border: 3px solid white;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+
+}
+.div-2 button a{
+ width: 50%;
+}
+.div-2 button:hover{
+    background-color: #fff;
+    color: black;
+
+}
+.div-2 button a:hover{
+    color: black;
+}
+@media only screen and (max-width: 1024px){
+    .Presentation h1{
+        font-size: 150px;
+        color: #fff;
+        /* padding-left: 20%; */
+    }
+    .Presentation h3{
+        font-size: 50px;
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 747px){
+    .Presentation h1{
+        font-size: 100px;
+        color: #fff;
+        /* padding-left: 20%; */
+    }
+    .Presentation h3{
+        font-size: 50px;
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 555px){
+    .Presentation h1{
+        font-size: 55px;
+        color: #fff;
+        /* padding-left: 20%; */
+    }
+    .Presentation h3{
+        font-size: 35px;
+        color: #fff;
+    }
+    .div-2 button{
+        font-size: 10px;
+     width: 100px;
+    }
+}
+@media only screen and (max-width: 350px){
+    .Presentation h3{
+        font-size:25px;
+    }
+}
+.bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.bar span {
+    border-bottom: 3px solid rgb(255, 181, 44);
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.first h4 {
+    color: rgb(255, 181, 44);
+}
+
+.container {
+    padding: 2rem;
+}
+
+.slide {
+    position: relative;
+    max-width: 768px;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+.slider::-webkit-scrollbar {
+    display: none;
+  }
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.contanier .nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.contanier .nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.contanier .nav a:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+   color: rgb(255, 181, 44);
+margin: 2%;}
+
+
+.info .one {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40%;
+    
+    gap: 5px;
+    text-align: center;
+    justify-content: center;
+}
+.info img{
+    width: 70px;
+
+}
+
+.info .two {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    gap: 5px;
+    text-align: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 1024px){
+    .info img{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .info{
+        font-size: 20px;
+    }
+    .info div{
+        padding: 5px;
+    }
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin-top: 10%;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+.footer .navBar{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer .navBar div{
+    flex-direction: column;
+   margin-bottom: 20px;
+   /* border-bottom: 1px solid black; */
+}
+
+.footer .navBar div .icons{
+    flex-direction: row;
+    row-gap: 20px;
+}
+.footer .logo{
+    width: 100%;
+    display: block;
+
+}
+.footer .logo img{
+  width: 300px;
+}
+.footer h2{
+    margin-bottom: 10px;
+    color: rgb(255, 181, 44);
+}
+.footer h3{
+    margin-bottom: 10px;
+}.footer h5{
+    margin-bottom: 10px;
+}
+.footer a{
+    margin-bottom: 10px;
+    display: block;
+}
+@media only screen and (max-width: 768px){
+    .footer .navBar{
+        flex-direction: row;
+        flex-basis: 50%;
+        justify-content: space-between;
+    }
+
+}
+@media only screen and (max-width: 540px)
+{
+    .footer .navBar{
+        flex-direction: column;
+    }
+}
+.footer a{
+    text-decoration: none;
+    color: rgb(94, 93, 93);
+}
+.footer a:hover{
+    text-decoration: underline solid rgb(94, 93, 93);
+}
+.Presentation-2{
+    background-image: url(pres.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    
+}
+.Presentation-2 .div-1{
+    flex-basis: 70%;
+    flex-direction: row;
+    text-align: end;
+   
+}
+.Presentation-2 img{
+align-self: flex-start;    
+    
+}
+  
+.Presentation-2 .div-2{
+    align-self: center;
+    flex-basis: 30%;
+}
+.Presentation-2 h1{
+    font-size: 180px;
+    color: #fff;
+    padding-right: 20%;
+}
+.Presentation-2 h3{
+    font-size: 80px;
+    color: #fff;
+    padding-right: 20%
+}
+ .div-2 button{
+    display: inline-block;
+    background-color: transparent;
+    padding: 5px;
+    width: 200px;
+    border-radius: 20px;
+    border: 3px solid white;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.div-2 button a{
+ width: 50%;
+}
+.div-2 button:hover{
+    background-color: #fff;
+    color: black;
+
+}
+.div-2 button a:hover{
+    color: black;
+}
+@media only screen and (max-width: 1024px){
+    .Presentation-2 h1{
+        font-size: 150px;
+        color: #fff;
+        /* padding-left: 20%; */
+    }
+    .Presentation-2 h3{
+        font-size: 50px;
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 747px){
+    .Presentation-2 h1{
+        font-size: 100px;
+        color: #fff;
+        /* padding-left: 20%; */
+    }
+    .Presentation-2 h3{
+        font-size: 50px;
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 555px){
+    .Presentation-2 h1{
+        font-size: 55px;
+        color: #fff;
+        /* padding-left: 20%; */
+    }
+    .Presentation-2 h3{
+        font-size: 35px;
+        color: #fff;
+    }
+    .div-2 button{
+        font-size: 10px;
+     width: 100px;
+    }
+    .div-2 button{
+       margin-left: 0;
+
+    }
+}
+@media only screen and (max-width: 350px){
+    .Presentation-2 h3{
+        font-size:25px;
+    }
+    .div-2 button{
+        margin-left: 0;
+ 
+     }
+}
