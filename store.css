@@ -262,3 +262,24 @@ width: 300px;
   margin-bottom: 10px;
   display: block;
 }
+@media only screen and (max-width: 768px){
+  .footer .navBar{
+      flex-direction: row;
+      flex-basis: 50%;
+      justify-content: space-between;
+  }
+
+}
+@media only screen and (max-width: 540px)
+{
+  .footer .navBar{
+      flex-direction: column;
+  }
+}
+.footer a{
+  text-decoration: none;
+  color: rgb(94, 93, 93);
+}
+.footer a:hover{
+  text-decoration: underline solid rgb(94, 93, 93);
+}
