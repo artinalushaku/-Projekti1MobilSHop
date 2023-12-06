@@ -203,3 +203,16 @@ body {
       justify-content: center;
   }
 }
+@media only screen and (max-width: 468px) {
+
+
+  .first {
+      flex-basis: 2%;
+      justify-content: center;
+  }
+
+  .first img {
+      width: 100px;
+  }
+
+}
