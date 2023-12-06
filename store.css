@@ -283,3 +283,43 @@ width: 300px;
 .footer a:hover{
   text-decoration: underline solid rgb(94, 93, 93);
 }
+input[type=text], input[type=Search] {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+.search .container{
+  margin-top: 30px;
+  
+}
+input[type=cars], input[type=kategorite] {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+
+@media only screen and (max-width: 768px){
+  #cars{
+      font-size: 60%;
+   }
+   .cars{
+      font-size: 75%;
+   }
+   #categories {
+      font-size: 10px; 
+    }
+    input[type=text], input[type=Search]{
+      margin-left: 10px;
+    }
+}
