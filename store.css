@@ -237,3 +237,28 @@ body {
  margin-bottom: 20px;
  /* border-bottom: 1px solid black; */
 }
+.footer .navBar div .icons{
+  flex-direction: row;
+  row-gap: 20px;
+}
+.footer .logo{
+  width: 100%;
+  display: block;
+
+}
+.footer .logo img{
+width: 300px;
+}
+.footer h2{
+  margin-bottom: 10px;
+  color: rgb(255, 181, 44);
+}
+.footer h3{
+  margin-bottom: 10px;
+}.footer h5{
+  margin-bottom: 10px;
+}
+.footer a{
+  margin-bottom: 10px;
+  display: block;
+}
