@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-
+    
 }
 .bar{
     background-color: black;
@@ -73,7 +72,7 @@ button {
     background-color: rgb(255, 181, 44);
     padding: 5px;
     width: 150px;
-    /* border-radius: 20px; */
+  
     border: 0;
     margin-top: 10px;
     font-size: 20px;
@@ -186,8 +185,7 @@ max-width: 100%;
 
 .sign {
     text-align: center;
-    /* margin-top: 40px; */
-    /* background: linear-gradient(90deg, orange, yellow); */
+   
     background-color: #8884FF;
     color: #fff;
 }
@@ -221,7 +219,7 @@ max-width: 100%;
 
 .offers {
 
-    /* margin-left: 20%; */
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -237,7 +235,7 @@ max-width: 100%;
 .first {
     text-align: center;
     background-color: white;
-    /* width: 30%; */
+
     padding-bottom: 10px;
     margin-top: 30px;
     display: flex;
@@ -298,7 +296,7 @@ max-width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /* flex-wrap: wrap; */
+    /
 }
 .Presentation .div-1{
     flex-basis: 70%;
@@ -312,7 +310,7 @@ max-width: 100%;
 .Presentation h1{
     font-size: 200px;
     color: #fff;
-    /* padding-left: 20%; */
+   
 }
 .Presentation h3{
     font-size: 100px;
@@ -346,7 +344,7 @@ max-width: 100%;
     .Presentation h1{
         font-size: 150px;
         color: #fff;
-        /* padding-left: 20%; */
+       
     }
     .Presentation h3{
         font-size: 50px;
@@ -357,7 +355,7 @@ max-width: 100%;
     .Presentation h1{
         font-size: 100px;
         color: #fff;
-        /* padding-left: 20%; */
+        
     }
     .Presentation h3{
         font-size: 50px;
@@ -368,7 +366,6 @@ max-width: 100%;
     .Presentation h1{
         font-size: 55px;
         color: #fff;
-        /* padding-left: 20%; */
     }
     .Presentation h3{
         font-size: 35px;
@@ -464,7 +461,7 @@ margin: 2%;}
 .footer .navBar div{
     flex-direction: column;
    margin-bottom: 20px;
-   /* border-bottom: 1px solid black; */
+   
 }
 
 .footer .navBar div .icons{
@@ -577,7 +574,7 @@ align-self: flex-start;
     .Presentation-2 h1{
         font-size: 150px;
         color: #fff;
-        /* padding-left: 20%; */
+        
     }
     .Presentation-2 h3{
         font-size: 50px;
@@ -588,7 +585,7 @@ align-self: flex-start;
     .Presentation-2 h1{
         font-size: 100px;
         color: #fff;
-        /* padding-left: 20%; */
+        
     }
     .Presentation-2 h3{
         font-size: 50px;
@@ -599,7 +596,7 @@ align-self: flex-start;
     .Presentation-2 h1{
         font-size: 55px;
         color: #fff;
-        /* padding-left: 20%; */
+        
     }
     .Presentation-2 h3{
         font-size: 35px;
