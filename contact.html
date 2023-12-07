@@ -142,31 +142,42 @@
             </div>
         </div>
        </section>
-       <script>
+
+    <script>
         function validateForm() {
             let fname = document.getElementById('fname').value;
             let lname = document.getElementById('lname').value;
             let email = document.getElementById('email').value;
-            let Subject = document.getElementById('Subject').value;
-    
-            let fnameRegex = /^[a-zA-Z\s]+&/;
-            if(!fnameRegex.test(fname)){
+            let subject = document.getElementById('subject').value;
+
+            let fnameRegex = /^[a-zA-Z\s]+$/;
+            if (!fnameRegex.test(fname)) {
                 alert('Please enter a valid name.');
                 return false;
             }
-            return true;
-        
+
+            let lnameRegex = /^[a-zA-Z\s]+$/;
+            if (!lnameRegex.test(lname)) {
+                alert('Please enter a valid last name.');
+                return false;
+            }
+
+            let emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+            if (!emailRegex.test(email)) {
+                alert("Ju lutem te shtoni email'in valid.");
+                return false;
+            }
+
             if (fname === "" || lname === "" || email === "" || subject === "") {
                 alert("All fields are required.");
                 return false;
             }
-    
-           
-    
-            return true; 
-        }
-    </script>
 
+            return true;
+        }
+        
+
+    </script>
 
 </body>
 
