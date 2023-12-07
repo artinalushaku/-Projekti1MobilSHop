@@ -136,3 +136,26 @@
     background-position: center;
     background-size: cover;
     }
+    .gaming h1, h3 {
+      margin: 0;
+      font-size: 450%;
+      line-height: 1;
+      /*font-family: 'Bebas Neue', sans-serif;*/
+    }
+    .gaming h1{
+      font-size: 700%;
+    }
+    @media only screen and (max-width: 800px)
+    {
+      .gaming{
+          font-size: 100%;
+      }
+    }
+    .build{
+      background-color: #1f1f1f;
+      display: flex;
+      flex-basis: 50%;
+      align-items: center;
+      width: 100%;
+    
+    }
