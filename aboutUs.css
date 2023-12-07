@@ -103,3 +103,24 @@ body {
     margin-bottom: 5px;
   
   }
+  .logo-2 {
+    display: none;
+  }
+  @media (max-width: 900px){
+    .logo-2 {
+        display: block;
+        margin-left: 20px;
+        order: -1;
+    }
+    .logo-2 img{
+        width: 20px;
+    }
+    nav{
+        display:none;
+    }
+    button{
+        width:45px;
+        margin-top: 7px;
+        font-size: 10px;
+    }
+  }
