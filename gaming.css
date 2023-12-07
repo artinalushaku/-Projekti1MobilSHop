@@ -52,3 +52,110 @@
   header ul li:hover {
     border-bottom: 3px solid rgb(255, 181, 44);
   }
+  header ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  header ul li:nth-child(5) {
+    border-bottom: 3px solid rgb(255, 181, 44);
+  }
+  
+  header ul li:last-child {
+    margin-right: 0;
+  }
+  
+  header ul li:first-child {
+    margin-left: 20px;
+  }
+  
+  button {
+    display: inline-block;
+    background-color: rgb(255, 181, 44);
+    padding: 5px;
+    width: 150px;
+    
+    border: 0;
+    margin-top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  
+  }
+  
+  button a {
+    color: white;
+    text-decoration: none;
+  }
+  .sign-in img{
+    width: 30px;
+    align-items: center;
+  
+  }
+  .sign-in{
+    display: flex;
+    align-items: center;
+  max-width: 100%;
+  }
+  .sign-in button{
+    margin-right: 10px;
+    margin-bottom: 5px;
+  
+  }
+  .logo-2 {
+    display: none;
+  }
+  @media (max-width: 900px){
+    .logo-2 {
+        display: block;
+        margin-left: 20px;
+        order: -1;
+    }
+    .logo-2 img{
+        width: 20px;
+    }
+    nav{
+        display:none;
+    }
+    button{
+        width:45px;
+        margin-top: 7px;
+        font-size: 10px;
+    }
+  }
+  .gaming{
+    background-color: #161616;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: white;
+    font-size: 150%;
+    background-image: url(pxfuel.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    }
+    .gaming h1, h3 {
+      margin: 0;
+      font-size: 450%;
+      line-height: 1;
+      /*font-family: 'Bebas Neue', sans-serif;*/
+    }
+    .gaming h1{
+      font-size: 700%;
+    }
+    @media only screen and (max-width: 800px)
+    {
+      .gaming{
+          font-size: 100%;
+      }
+    }
+    .build{
+      background-color: #1f1f1f;
+      display: flex;
+      flex-basis: 50%;
+      align-items: center;
+      width: 100%;
+    
+    }
