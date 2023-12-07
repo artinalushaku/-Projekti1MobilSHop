@@ -313,3 +313,101 @@
       font-size: 8px;
   
   }
+  .sign span {
+    background-color: rgb(255, 181, 44);
+    padding: 4px;
+    color: #fff;
+}
+
+.sign button {
+    margin-top: 25px;
+    background-color: black;
+    color: rgb(255, 181, 44);
+}
+
+.sign button a {
+    color: rgb(255, 181, 44);
+
+}
+
+.sign .container {
+    padding-top: 30px;
+    background: linear-gradient(180deg, rgb(255, 181, 44), rgb(235, 220, 13));
+    padding-bottom: 30px;
+
+}
+
+.sign h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: #1f1f1f;
+}
+.footer .navBar{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer .navBar div{
+    flex-direction: column;
+   margin-bottom: 20px;
+   
+}
+
+.footer .navBar div .icons{
+    flex-direction: row;
+    row-gap: 20px;
+}
+.footer .logo{
+    width: 100%;
+    display: block;
+
+}
+.footer .logo img{
+  width: 300px;
+}
+.footer h2{
+    margin-bottom: 10px;
+    color: rgb(255, 181, 44);
+    
+}
+.footer h3{
+    margin-bottom: 10px;
+    font-size: 150%;
+}.footer h5{
+    margin-bottom: 10px;
+}
+.footer a{
+    margin-bottom: 10px;
+    display: block;
+}
+@media only screen and (max-width: 768px){
+    .footer .navBar{
+        flex-direction: row;
+        flex-basis: 50%;
+        justify-content: space-between;
+    }
+
+}
+@media only screen and (max-width: 540px)
+{
+    .footer .navBar{
+        flex-direction: column;
+    }
+}
+.footer a{
+    text-decoration: none;
+    color: rgb(94, 93, 93);
+}
+.footer a:hover{
+    text-decoration: underline solid rgb(94, 93, 93);
+    color: #fff;
+}
