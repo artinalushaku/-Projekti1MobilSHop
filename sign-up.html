@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="sign-up.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"rel="stylesheet"
-      />
 </head>
 <body>
     <div class="container">
-        <label for="uname"><b>First name</b></label>
-        <input type="text" placeholder="Enter First Name" name="uname" required>
+        <form onsubmit="return validateForm()">
+            <label for="uname"><b>First name</b></label>
+            <input type="text" placeholder="Enter First Name" id="uname" required>
     
-        <label for="uname"><b>Last Name</b></label>
-        <input type="text" placeholder="Enter Last Name" name="psw" required>
+            <label for="lname"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" id="lname" required>
 
-        <label for="uname"><b>Password</b></label>
-        <input type="password" placeholder="Enter password" name="psw" required>
-        <label for="uname"><b>Confirm password</b></label>
-        <input type="password" placeholder="Confirm password" name="psw" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" id="psw" required>
             
-        <button type="submit">Register</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-        <p> Have an account <span><a href="sign-in.html">Sign In</a></span></p>
-
-      </div>
-      <div class="close">
+            <label for="confirmpsw"><b>Confirm password</b></label>
+            <input type="password" placeholder="Confirm password" id="confirmpsw" required>
+            
+            <button type="submit">Register</button>
+            
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            
+            <p> Have an account <span><a href="sign-in.html">Sign In</a></span></p>
+        </form>
+    </div>
+    <div class="close">
         <a href="index.html"><img src="close.png" alt=""></a>
     </div>
+    <script>
+        function validateForm() {
+            let fname = document.getElementById('uname').value;
+            let lname = document.getElementById('lname').value;
+            let password = document.getElementById('psw').value;
+            let confirmPassword = document.getElementById('confirmpsw').value;
+
+            let nameRegex = /^[A-Z][a-z]*$/;
+            if (!nameRegex.test(fname)) {
+                alert('First name should start with a capital letter.');
+                return false;
+            }
+            
+            if (!nameRegex.test(lname)) {
+                alert('Last name should start with a capital letter.');
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Password and Confirm Password should match.');
+                return false;
+            }
+
+            if (fname === "" || lname === "" || password === "" || confirmPassword === "") {
+                alert('Complete all fields.');
+                return false;
+            }
+
+            alert('You are registered!');
+            return true;
+        }
+    </script>
 </body>
 </html>
