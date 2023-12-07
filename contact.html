@@ -77,7 +77,9 @@
     </div>
 
     <div class="last">
-        <form action="" method="post">
+
+            <form action="" method="post" onsubmit="return validateForm();">
+
             <div class="container">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
@@ -150,7 +152,7 @@
             let email = document.getElementById('email').value;
             let subject = document.getElementById('subject').value;
 
-            let fnameRegex = /^[a-zA-Z\s]+$/;
+            let fnameRegex = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;                                                      /* /^[a-zA-Z\s]+$/; */
             if (!fnameRegex.test(fname)) {
                 alert('Please enter a valid name.');
                 return false;
@@ -164,8 +166,14 @@
 
             let emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
             if (!emailRegex.test(email)) {
-                alert("Ju lutem te shtoni email'in valid.");
+                alert('Ju lutem te shtoni email in valid.');
                 return false;
+            }
+            let subjectRegex = /^[a-zA-Z\s]+$/;
+            if(!subjectRegex.test(subject)){
+                alert('Please write a message');
+                return false;
+
             }
 
             if (fname === "" || lname === "" || email === "" || subject === "") {
