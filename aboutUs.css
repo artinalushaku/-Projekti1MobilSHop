@@ -88,3 +88,18 @@ body {
     color: white;
     text-decoration: none;
   }
+  .sign-in img{
+    width: 30px;
+    align-items: center;
+  
+  }
+  .sign-in{
+    display: flex;
+    align-items: center;
+  max-width: 100%;
+  }
+  .sign-in button{
+    margin-right: 10px;
+    margin-bottom: 5px;
+  
+  }
