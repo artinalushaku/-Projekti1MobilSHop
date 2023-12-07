@@ -122,3 +122,17 @@
         font-size: 10px;
     }
   }
+  .gaming{
+    background-color: #161616;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: white;
+    font-size: 150%;
+    background-image: url(pxfuel.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    }
