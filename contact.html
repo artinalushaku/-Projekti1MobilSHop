@@ -144,8 +144,8 @@
             </div>
         </div>
        </section>
-
-    <script>
+    
+       <script>
         function validateForm() {
             let fname = document.getElementById('fname').value;
             let lname = document.getElementById('lname').value;
@@ -169,7 +169,7 @@
                 alert('Ju lutem te shtoni email in valid.');
                 return false;
             }
-            let subjectRegex = /^[a-zA-Z\s]+$/;
+            let subjectRegex = /^(?!0$).+/;                                                         /* /^[a-zA-Z\s]+$/; */
             if(!subjectRegex.test(subject)){
                 alert('Please write a message');
                 return false;
@@ -181,8 +181,12 @@
                 return false;
             }
 
-            return true;
+            return true; 
         }
+
+
+
+
         
 
     </script>
