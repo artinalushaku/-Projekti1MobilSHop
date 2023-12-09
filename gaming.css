@@ -140,7 +140,6 @@
       margin: 0;
       font-size: 450%;
       line-height: 1;
-      /*font-family: 'Bebas Neue', sans-serif;*/
     }
     .gaming h1{
       font-size: 700%;
@@ -246,29 +245,7 @@
           margin-top: 30px;
       }
     }
-    .gallery {
-      background-color: #161616;
-      display: flex;
-      justify-content: center;
-      gap: 20;
-    }
-    
-    .gallery .first video {
-      height: 700px;
-      width: 400px; 
-      object-fit: cover; 
-    }
-    video::-webkit-media-controls {
-      display: none;
-    }
-    
-    video::-webkit-media-controls-enclosure {
-      display: none !important;
-    }
-    
-    video::-webkit-media-controls-panel {
-      display: none !important;
-    }
+    /*//////*/
     @media only screen and (max-width: 1200px){
       .gallery .first video {
           height: 500px;
