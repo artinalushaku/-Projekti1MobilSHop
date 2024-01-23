@@ -83,13 +83,13 @@
             <div class="container">
                 <form onsubmit="validateForm();">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+                <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
 
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
+                <input type="text" id="lname" name="lname" placeholder="Enter Last Name" >
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email" >
+                <input type="text" id="email" name="email" placeholder="Enter Email" >
             </div>
             <div class="container-1">
                 <label for="subject">Message</label>
@@ -153,7 +153,7 @@
             let email = document.getElementById('email').value;
             let subject = document.getElementById('subject').value;
 
-            let fnameRegex =  /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;                                                                                                                               
+            let fnameRegex = /^[a-z ,.'-]+$/i;                                                                                                                       
             if (!fnameRegex.test(fname)) {
                 alert('Please enter a valid name.');
                 return false;
