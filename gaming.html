@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="gaming.css">
+    
+    
 </head>
 
 <body>
@@ -47,6 +49,7 @@
            
        
     </header>
+
     <div class="gaming">
         <h3>GAMING</h3>
         <h1>TIME</h1>
@@ -84,10 +87,35 @@
                 Konzolat e lojërave: Përfshini konzolat e njohura të lojërave si PlayStation, Xbox, Nintendo Switch dhe të tjerë.
                 Ju gjithashtu mund të ofroni paketa konzolash me lojëra dhe aksesorë.</p>
         </div>
-        <div class="second">
-            <img src="png.png" alt="">
-        </div>
+        <div id="second">
+            <header>
+            <h2>Slide Show: shfaqja e imazheve </h2>
+            <img name="mySlide" id="slideshow" />
+            </header>
+            <button onclick="ndrroImg()">Next</button>
+            </div>
+            
     </div>
+    <script>
+        var i = 0;
+        var imgArray = [
+        "png.png",
+        "setup.png",
+        "mouse.png"
+        
+        ];
+        function ndrroImg() {
+        document.getElementById('slideshow').src = imgArray[i];
+        if (i < imgArray.length - 1) {
+        i++;
+        } else {
+        i = 0;
+        }
+        //setTimeout("ndrroImg()", 2600)
+        }
+        document.body.addEventListener('load', ndrroImg());
+        </script>
+        
     
 
 
@@ -150,6 +178,14 @@
             </div>
         </div>
        </section>
+      
+    
+
+
+
 </body>
 
+
+
 </html>
+
