@@ -62,7 +62,7 @@
             <div class="con-info">
                 <h3>CUSTOMER SUPPORT:</h3>
                 <p>Email: info.mobilshop@gmail.com<br>
-                    Phone: 65433561</p>
+                    Phone: 65933561</p>
                 <div class="col">
                     <h4>Monday through Friday</h4>
                     <p>08:30 AM to 02:30 PM</p>
@@ -78,21 +78,22 @@
 
     <div class="last">
 
-            <form action="" method="post" onsubmit="return validateForm();">
-
+            
+          
             <div class="container">
+                <form onsubmit="validateForm();">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+                <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
 
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
+                <input type="text" id="lname" name="lname" placeholder="Enter Last Name" >
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                <input type="text" id="email" name="email" placeholder="Enter Email" >
             </div>
             <div class="container-1">
                 <label for="subject">Message</label>
-                <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px" required></textarea>
+                <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px" ></textarea>
                 <input type="submit" value="Submit">
             </div>
         </form>
@@ -127,7 +128,7 @@
     
             </div>
             <div class="div">
-                <h2>Pyetje të shpeshta                </h2>
+                <h2>Pyetje të shpeshta </h2>
                 <a href="">Per – Mobil Shop</a>
                 <a href="">Pagesat</a>
                  <a href="">Qeshtjet Teknike</a>
@@ -152,38 +153,36 @@
             let email = document.getElementById('email').value;
             let subject = document.getElementById('subject').value;
 
-            let fnameRegex = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;                                                      /* /^[a-zA-Z\s]+$/; */
+            let fnameRegex = /^[a-z ,.'-]+$/i;                                                                                                                       
             if (!fnameRegex.test(fname)) {
                 alert('Please enter a valid name.');
                 return false;
             }
 
-            let lnameRegex = /^[a-zA-Z\s]+$/;
+            let lnameRegex =/^[A-Z]/;                                                                 
             if (!lnameRegex.test(lname)) {
                 alert('Please enter a valid last name.');
                 return false;
             }
+           
 
             let emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
             if (!emailRegex.test(email)) {
-                alert('Ju lutem te shtoni email in valid.');
+                alert('Please enter a valid email.');
                 return false;
-            }
-            let subjectRegex = /^(?!0$).+/;                                                         /* /^[a-zA-Z\s]+$/; */
+            } 
+     
+            let subjectRegex = /^(?!0$).+/;                                                       
             if(!subjectRegex.test(subject)){
                 alert('Please write a message');
-                return false;
+                return false; 
 
             }
+           
+            alert('The message is sent!');
+            return true;
 
-            if (fname === "" || lname === "" || email === "" || subject === "") {
-                alert("All fields are required.");
-                return false;
-            }
-
-            return true; 
         }
-
 
 
 

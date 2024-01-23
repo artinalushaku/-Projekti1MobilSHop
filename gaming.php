@@ -88,21 +88,11 @@
             <img src="png.png" alt="">
         </div>
     </div>
-    <h1 class="text">Gallery</h1>
-    <div class="gallery">
-        <div class="first">
-            <video  width="640" autoplay muted loop controls>
-                <source src="one.mp4" type="video/mp4">
-        </div>
-        <div class="first">
-            <video  width="640" autoplay muted loop controls>
-                <source src="two.mp4" type="video/mp4">
-        </div>
-        <div class="first">
-            <video  width="640" autoplay muted loop controls>
-                <source src="three.mp4" type="video/mp4">
-        </div>
-    </div>
+    
+
+
+
+    
     <section class="sign">
         <div class="container">
             <h3>Explore our amazing collection of products.

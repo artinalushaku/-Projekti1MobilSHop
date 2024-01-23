@@ -218,7 +218,7 @@
 
             </div>
             <div class="div">
-                <h2>Pyetje të shpeshta                </h2>
+                <h2>Pyetje të shpeshta  </h2>
                 <a href="">Per – Mobil Shop</a>
                 <a href="">Pagesat</a>
                  <a href="">Qeshtjet Teknike</a>
@@ -228,7 +228,7 @@
             <div class="div">
                 <h2>Kontakti               </h2>
                 <a href="">Email-contact@mobilshop.com</a>
-                <a href="">Tel:+383 045 883 702</a>
+                <a href="">Tel:+383 045 883 697</a>
                  <a href="">Prishtinë, Kosovë</a>
                  <a href="">.......</a>
 
