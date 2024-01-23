@@ -63,5 +63,36 @@
             return true;
         }
     </script>
+    <?php 
+     $user1 = [
+    "name"=>"Rina",
+    "surname"=>"Ademaj",
+    "email"=>"ra@ubt-uni.net",
+    "username"=>"rinaademaj",
+    "password" => "rina123",
+    "role"=>"admin"
+  ];
+  
+  $user2 = [
+    "name"=>"Artina",
+    "surname"=>"Lushaku",
+    "email"=>"al@gmail.com",
+    "username"=>"artinalushaku",
+    "password" => "artina321",
+    "role"=>"user"
+  ];
+
+  $user3 = [
+    "name"=>"Bleona",
+    "surname"=>"Gashi",
+    "email"=>"bg@ubt-uni.net",
+    "username"=>"bleonagashi",
+    "password" => "bleona123",
+    "role"=>"user"
+  ];
+
+  $users = [$user1, $user2, $user3];
+?>
 </body>
 </html>
+
