@@ -73,31 +73,29 @@
                 <p>Please contact our customer service for the correct postal address for product returns and post-purchase services.</p>
                 <p>Email: warranty@mobileshop.com</p>
             </div>
-        </div>
+        </div> 
     </div>
+   
+<div class="last">
+    <div class="container">
+        <form action="your_php_file.php" method="GET">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
 
-    <div class="last">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter Last Name" >
 
-            
-          
-            <div class="container">
-                <form onsubmit="validateForm();">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
-
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Enter Last Name" >
-
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Enter Email" >
-            </div>
-            <div class="container-1">
-                <label for="subject">Message</label>
-                <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px" ></textarea>
-                <input type="submit" value="Submit">
-            </div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter Email" >
+    </div>
+    <div class="container-1">
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px"></textarea>
+        <input type="submit" value="Submit">
         </form>
     </div>
+</div>
+
     <section class="footer">
         <hr>
         <div class="logo">
@@ -189,6 +187,26 @@
         
 
     </script>
+    <?php
+    function testGet() {
+        if (isset($_GET['submit'])) {
+            $perdoruesi = $_GET['fname'];
+            $fjalkalimi = $_GET['lname'];
+            $email = $_GET['email'];
+            $message = $_GET['subject'];
+
+            echo 'First Name: ', $perdoruesi, '<br>';
+            echo 'Last Name: ', $fjalkalimi, '<br>';
+            echo 'Email: ', $email, '<br>';
+            echo 'Message: ', $message;
+        } else {
+            echo 'Ju nuk keni shtyp butonin RUAJ!';
+        }
+    }
+
+    testGet(); // Call the function to display the result
+    ?>
+
 
 </body>
 
