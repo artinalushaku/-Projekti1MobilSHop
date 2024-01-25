@@ -1,3 +1,44 @@
+
+
+<?php
+
+  if(isset($_POST['contactbtn'])){
+    if(empty($_POST['fname']) || empty($_POST['lname'])|| empty($_POST['email'])){
+      echo '<script>alert("Please fill the required fields!");</script>';
+    }else{
+        
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $email = $_POST['email'];
+
+
+        include_once 'users.php';
+        $i=0;
+        
+        foreach($users as $user){
+          if($user['fname'] == $fname && $user['lname'] == $lname && $user['email'] == $email){
+            session_start();
+      
+            $_SESSION['fname'] = $fname;
+            $_SESSION['lname'] = $lname;
+            $_SESSION['email'] = $email;
+            $_SESSION['role'] = $user['role'];
+            $_SESSION['loginTime'] = date("H:i:s");
+            header("location:index.php");
+            exit();
+          }else{
+            $i++;
+            if($i == sizeof($users)) {
+              echo "Incorrect Name or Last Name or Email";
+              exit();
+            }
+          }
+        }
+    }
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,25 +116,29 @@
             </div>
         </div> 
     </div>
-   
-<div class="last">
-    <div class="container">
-        <form action="your_php_file.php" method="GET">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
+    
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Enter Last Name" >
+    <div class="last">
+    
+            
+          
+<div class="container">
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" >    onsubmit="validateForm()";
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
 
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Enter Email" >
-    </div>
-    <div class="container-1">
-        <label for="subject">Message</label>
-        <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px"></textarea>
-        <input type="submit" value="Submit">
-        </form>
-    </div>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname" placeholder="Enter Last Name" >
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Enter Email" >
+</div>
+<div class="container-1">
+    <label for="subject">Message</label>
+    <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px" ></textarea>
+    <input type="submit" name="contactbtn" value="Submit">
+</div>
+</form>
 </div>
 
     <section class="footer">
@@ -145,7 +190,7 @@
        </section>
     
        <script>
-        function validateForm() {
+        function //validateForm() {
             let fname = document.getElementById('fname').value;
             let lname = document.getElementById('lname').value;
             let email = document.getElementById('email').value;
@@ -187,25 +232,7 @@
         
 
     </script>
-    <?php
-    function testGet() {
-        if (isset($_GET['submit'])) {
-            $perdoruesi = $_GET['fname'];
-            $fjalkalimi = $_GET['lname'];
-            $email = $_GET['email'];
-            $message = $_GET['subject'];
-
-            echo 'First Name: ', $perdoruesi, '<br>';
-            echo 'Last Name: ', $fjalkalimi, '<br>';
-            echo 'Email: ', $email, '<br>';
-            echo 'Message: ', $message;
-        } else {
-            echo 'Ju nuk keni shtyp butonin RUAJ!';
-        }
-    }
-
-    testGet(); // Call the function to display the result
-    ?>
+    
 
 
 </body>

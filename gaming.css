@@ -388,4 +388,7 @@
     text-decoration: underline solid rgb(94, 93, 93);
     color: #fff;
 }
-  
+.header div .second {
+  width:500px;
+}
+ 
