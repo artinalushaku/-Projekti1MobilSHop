@@ -123,7 +123,7 @@
             
           
 <div class="container">
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" onsubmit="validateForm()"; >    onsubmit="validateForm()";
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" onsubmit="validateForm()"; >    
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
 

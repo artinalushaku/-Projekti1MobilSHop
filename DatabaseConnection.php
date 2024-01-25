@@ -1,6 +1,6 @@
 <?php
 class DatabaseConnection{
-    //keto te dhena i merrni ne baze te databazes suaj
+   
     private $host = "localhost";
     private $username = "root";
     private $password = "";
