@@ -24,7 +24,7 @@
             $_SESSION['email'] = $email;
             $_SESSION['role'] = $user['role'];
             $_SESSION['loginTime'] = date("H:i:s");
-            header("location:index.php");
+            header("location:index.php"); 
             exit();
           }else{
             $i++;
@@ -123,7 +123,7 @@
             
           
 <div class="container">
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" >    onsubmit="validateForm()";
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" onsubmit="validateForm()"; >    onsubmit="validateForm()";
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
 
@@ -190,7 +190,7 @@
        </section>
     
        <script>
-        function //validateForm() {
+        function validateForm() {         
             let fname = document.getElementById('fname').value;
             let lname = document.getElementById('lname').value;
             let email = document.getElementById('email').value;
