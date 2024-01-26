@@ -76,3 +76,30 @@ class ContactRepository {
     
 }
 ?>
+<?php
+include('DatabaseConnection.php'); // Include your DatabaseConnection class
+
+class Product {
+    // Function to fetch product data from the database
+    public function getProduktetData($id) {
+        global $db; // Use the global database connection
+
+        try {
+            $stmt = $db->prepare("SELECT * FROM produktet WHERE id = :id");
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            return null;
+        }
+    }
+}
+
+// Assuming $productId is the ID of the product you want to display
+$id = 1; // Change this to the actual ID of the product
+
+$produktetObj = new Product();
+$produktetData = $produktetObj->getProduktetData($id);
+?>

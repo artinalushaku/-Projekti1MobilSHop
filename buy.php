@@ -1,3 +1,14 @@
+
+<?php
+require_once 'DatabaseConnection.php';
+$database = new DatabaseConnection();
+$conn = $database->getDb();
+
+$sql = "SELECT * FROM produktet";
+$all_produktet = $conn->query($sql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +30,7 @@
     <header>
         <div class="container">
             <div class="logo">
-               <a href="index.html
+               <a href="index.php
                "><img src="logo.png" alt=""></a> 
             </div>
             <div class="logo-2">
@@ -50,35 +61,35 @@
            
        
     </header>
+    <?php
+while ($row = $all_produktet->fetch(PDO::FETCH_ASSOC)) {
+    // Your code to process each row
+
+
+
+    
+    
+    
+    ?>
     <section class="buys">
         <div class="one">
-            <img src="download.webp" alt="">
+            <img src="<?php echo $row["produktet_image"];?>" alt="">
         </div>
         <div class="second">
-            <h2>Apple MacBook Air 13.3"</h2>
-            <h1>999.0$</h1>
-            <h6>sasia</h6>
-            <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <p class="name"><?php echo $row["name"];?></p>
+            <p class="price"><?php echo $row["price"];?></p>
+           <p class="discount"><b><del><?php echo $row["discount"];?></del></b></p>
             <div class="btn">
                 <button><a href="">Bleje Tani</a></button>
                 <button class="btn-s"><a href="">Shporta</a></button>
             </div>
         </div>
     </section>
+    <?php
+    }
+    
+    ?>
 
-    <div class="description">
-        <h2>Pershkrimi</h2>
-        <p>Gjenerata e re e MacBook Air nga Apple është një revolucion i vërtetë për sa i takon performancës së këtij
-            laptopi kompakt. Ai ofron të gjitha tiparet dhe veçoritë tuaja të preferuara, por performanca është në një
-            nivel tjetër. Me MacBook Air të ri, ju mund të redaktoni video me rezolucion të lartë e po ashtu të
-            përfitoni nga aplikacionet profesionale. Pra, ky model revolucionar Apple MacBook Air vjen me procesorin e
-            Apple M1, procesor grafik 7-bërthamor dhe motorin Neural Engine 16-bërthamor. Procesori plotësohet me 8 GB
-            memorie RAM. Ekrani Retina ka diagonale 13.3" IPS dhe rezolucion prej 2560 × 1600 px, me teknologji True
-            Tone dhe gamë të gjerë ngjyrash (P3). Një hard disk 256 GB SSD është i gatshëm për të dhënat e përdoruesit.
-            Pastaj laptopi ka Wi-Fi ac, Bluetooth 5.0, 2x Thunderbolt / USB 4, kamerë FaceTime HD, Touch ID, panel të
-            prekjes Force Touch, lidhës audio 3.5 mm, tastierë Magic dhe konstruksion alumini. Vjen me sistemin operativ
-            macOS Big Sur.</p>
-    </div>
     <section class="footer">
         <hr>
         <div class="logo">
@@ -129,3 +140,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
