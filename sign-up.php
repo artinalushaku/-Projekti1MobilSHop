@@ -29,7 +29,7 @@
         </form>
     </div>
     <div class="close">
-        <a href="index.html"><img src="close.png" alt=""></a>
+        <a href="index.php"><img src="close.png" alt=""></a>
     </div>
     <script>
         function validateForm() {

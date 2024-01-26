@@ -1,3 +1,24 @@
+<?php
+
+
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['contactbtn'])) {
+    // Create a new Contact object
+    $contact = new Contact();
+
+    // Set its properties with form data
+    $contact->setFname($_POST['fname']);
+    $contact->setLname($_POST['lname']);
+    $contact->setEmail($_POST['email']);
+    $contact->setSubject($_POST['subject']);
+
+    // Create a ContactRepository and insert the contact
+    $contactRespository = new ContactRespository();
+    $contactRespository->insertContact($contact);
+}
+?>
+
 
 
 <?php
@@ -59,22 +80,22 @@
     <header>
         <div class="container">
             <div class="logo">
-               <a href="index.html
+               <a href="index.php
                "><img src="logo.png" alt=""></a> 
             </div>
             <div class="logo-2">
-                <a href="nav.html">
+                <a href="# ">
                     <img src="bars.png" alt="">
                 </a>
             </div>
             <nav>
             
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="gaming.html">Gaming</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="store.php">Store</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="aboutUs.php">About Us</a></li>
+                    <li><a href="gaming.php">Gaming</a></li>
     
     
                 </ul>
@@ -82,7 +103,7 @@
                </nav>
                <div class="sign-in">
                 <a href=""><img src="icons8-add-to-shopping-basket-96.png" alt=""></a>
-                <a href="sign-in.html"><button>Sign In</button></a>
+                <a href="sign-in.php"><button>Sign In</button></a>
                 
             </div>
         </div>
@@ -117,6 +138,9 @@
         </div> 
     </div>
     
+    
+    
+    
 
     <div class="last">
     
@@ -144,7 +168,7 @@
     <section class="footer">
         <hr>
         <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="logo.png" alt="">
             </a>
         </div>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,7 @@
     
 </head>
 <body>
+    
     <div class="bar">
         <h1>Mbani lidhjen. Përjetojeni inovacionin. Zgjidhni Mobil Shop.
         </h1>
@@ -27,11 +30,11 @@
             <nav>
             
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="gaming.html">Gaming</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="store.php">Store</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="aboutUs.php">About Us</a></li>
+                    <li><a href="gaming.php">Gaming</a></li>
     
     
                 </ul>
@@ -39,7 +42,7 @@
                </nav>
                <div class="sign-in">
                 <a href=""><img src="icons8-add-to-shopping-basket-96.png" alt=""></a>
-                <a href="sign-in.html"><button>Sign In</button></a>
+                <a href="sign-in.php"><button>Sign In</button></a>
                 
             </div>
         </div>
@@ -53,7 +56,7 @@
         <p>Best Prices</p>
         <div class="main-class">
             <p class="check">check our store</p>
-            <button><a href="store.html">Our Store</a></button>
+            <button><a href="store.php">Our Store</a></button>
         </div>
         
     </section>
@@ -62,7 +65,7 @@
             <h3>Dont have an account
 
              </h3>
-            <button><a href="sign-up.html">Register</a></button>
+            <button><a href="sign-up.php">Register</a></button>
         </div>
         
        
@@ -74,7 +77,7 @@
             <h3>Your Phone</h3>
         </div>
         <div class="div-2">
-            <a href="contact.html"> <button> Contact</button></a>
+            <a href="contact.php"> <button> Contact</button></a>
 
         </div>
     </section>
@@ -83,33 +86,34 @@
             Ofertat më të mirat
         </span> 
     </div>
+    </div>
     <div class="offers">
         <div class="box">
             <div class="first">
-               <a href="buy.html">
+               <a href="buy.php">
                 <img src="download.webp" alt="">
                </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
-                <button><a href="sign-up.html">Shto në shportë</a></button>
+                <button><a href="buy.php">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="buy2.html">
+                <a href="#">
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 11, 64GB, Black</h3>
                 <h4>549.00 €</h4>
-                <button><a href="sign-up.html">Shto në shportë</a></button>
+                <button><a href="buy2.php">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="buy3.html">
+                <a href="#">
                     <img src="hyper.webp" alt="">
                    </a>                 <h3>Kufje HyperX Cloud II, , të kuqe</h3>
                 <h4>29.oo$</h4>
-                <button><a href="sign-up.html">Shto në shportë</a></button>
+                <button><a href="buy3.php">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="buy.html">
+                <a href="#">
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
@@ -117,7 +121,7 @@
                 <button><a href="sign-up.html">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="buy2.html">
+                <a href="#">
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 12, 64GB, Black</h3>
@@ -125,21 +129,21 @@
                 <button><a href="sign-up.html">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="buy3.html">
+                <a href="#">
                     <img src="hyper.webp" alt="">
                    </a>                  <h3>Kufje HyperX Cloud II, , të kuqe</h3>
                 <h4>70.0$</h4>
                 <button><a href="sign-up.html">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="buy2.html">
+                <a href="#">
                     <img src="iphone.webp" alt="">
                    </a>                 <h3>Apple iPhone 13, 64GB, red</h3>
                 <h4>999.0$</h4>
                 <button><a href="sign-up.html">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="buy.html">
+                <a href="#">
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
@@ -182,7 +186,7 @@
             <h3>You a Gamer</h3>
         </div>
         <div class="div-2">
-            <a href="gaming.html"><button>Gaming</button>  </a>
+            <a href="gaming.php"><button>Gaming</button>  </a>
 
         </div>
         <img src="new.png" alt="">
@@ -191,7 +195,7 @@
     <section class="footer">
         <hr>
         <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="logo.png" alt="">
             </a>
         </div>
