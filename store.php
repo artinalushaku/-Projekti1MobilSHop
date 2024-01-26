@@ -3,6 +3,7 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="store.css">
+
 </head>
 <body>
     <div class="bar">
@@ -38,6 +39,15 @@
            
        
     </header>
+    <div id="kontenti">
+        <header>
+        <h2>Slide Show: shfaqja e imazheve </h2>
+        <img name="mySlide" id="slideshow" />
+        </header>
+        <button onclick="ndrroImg()">Next</button>
+        </div>
+   
+        
     <div class="search">
         <div class="container">
             <!-- <label for="search"><b>Search</b></label> -->
