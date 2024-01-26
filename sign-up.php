@@ -1,8 +1,20 @@
 <?php
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$password = $_POST['password'];
-$confirm_password = $_POST['confirm_password'];
+
+function testPost()
+{
+if(isset($_POST['submit'])){
+    $firstname=$_POST['firstname'];
+    $lastname=$_POST['lastname'];
+    $password=$_POST['password'];
+    $confirm_password=$_POST['confirm_password'];
+    echo 'Firstname:',$firstname,
+    '<br>Lastname:',$lastname,
+    '<br>Password:',$password,
+    '<br>Confirm_password:',$confirm_password;
+}else{
+echo 'Nuk keni shtypur te dhenat qe duhen';
+ }
+}
 
 class DatabaseConnection{
     private $server = "localhost";
@@ -10,11 +22,11 @@ class DatabaseConnection{
     private $lastname = "root";
     private $password = "";
     private $confirm_password = "";
-    private $database = "-projekti1MobilShop";
+    private $database = "-projekti1Mobil";
 
     function startConnection(){
         try{
-            $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->firstname,$this->password);
+            $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->firstname,$this->lastname,$this->password,$this->confirm_password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         }catch(PDOException $e){
@@ -33,19 +45,20 @@ class DatabaseConnection{
     <link rel="stylesheet" href="sign-up.css">
 </head>
 <body>
+
     <div class="container">
         <form onsubmit="return validateForm()" action="connect.php" method="post">
             <label for="uname"><b>First name</b></label>
-            <input type="text" placeholder="Enter First Name" id="uname" required name="firstname">
+            <input type="text" placeholder="Enter First Name" id="uname" required name='firstname'>
     
             <label for="lname"><b>Last Name</b></label>
-            <input type="text" placeholder="Enter Last Name" id="lname" required name="lastname">
+            <input type="text" placeholder="Enter Last Name" id="lname" required name='lastname'>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter password" id="psw" required name="password">
+            <input type="password" placeholder="Enter password" id="psw" required name='password'>
             
             <label for="confirmpsw"><b>Confirm password</b></label>
-            <input type="password" placeholder="Confirm password" id="confirmpsw" required name="confirm_password">
+            <input type="password" placeholder="Confirm password" id="confirmpsw" required name='confirm_password'>
             
             <button type="submit">Register</button>
             
