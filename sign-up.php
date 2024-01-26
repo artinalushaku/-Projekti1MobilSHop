@@ -1,3 +1,31 @@
+<?php
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$password = $_POST['password'];
+$confirm_password = $_POST['confirm_password'];
+
+class DatabaseConnection{
+    private $server = "localhost";
+    private $firstname = "root"; 
+    private $lastname = "root";
+    private $password = "";
+    private $confirm_password = "";
+    private $database = "-projekti1MobilShop";
+
+    function startConnection(){
+        try{
+            $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->firstname,$this->password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $conn;
+        }catch(PDOException $e){
+            echo "Database Connection Failed: " . $e->getMessage();
+            return null;
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +34,18 @@
 </head>
 <body>
     <div class="container">
-        <form onsubmit="return validateForm()">
+        <form onsubmit="return validateForm()" action="connect.php" method="post">
             <label for="uname"><b>First name</b></label>
-            <input type="text" placeholder="Enter First Name" id="uname" required>
+            <input type="text" placeholder="Enter First Name" id="uname" required name="firstname">
     
             <label for="lname"><b>Last Name</b></label>
-            <input type="text" placeholder="Enter Last Name" id="lname" required>
+            <input type="text" placeholder="Enter Last Name" id="lname" required name="lastname">
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter password" id="psw" required>
+            <input type="password" placeholder="Enter password" id="psw" required name="password">
             
             <label for="confirmpsw"><b>Confirm password</b></label>
-            <input type="password" placeholder="Confirm password" id="confirmpsw" required>
+            <input type="password" placeholder="Confirm password" id="confirmpsw" required name="confirm_password">
             
             <button type="submit">Register</button>
             
@@ -63,36 +91,6 @@
             return true;
         }
     </script>
-    <?php 
-     $user1 = [
-    "name"=>"Rina",
-    "surname"=>"Ademaj",
-    "email"=>"ra@ubt-uni.net",
-    "username"=>"rinaademaj",
-    "password" => "rina123",
-    "role"=>"admin"
-  ];
-  
-  $user2 = [
-    "name"=>"Artina",
-    "surname"=>"Lushaku",
-    "email"=>"al@gmail.com",
-    "username"=>"artinalushaku",
-    "password" => "artina321",
-    "role"=>"user"
-  ];
-
-  $user3 = [
-    "name"=>"Bleona",
-    "surname"=>"Gashi",
-    "email"=>"bg@ubt-uni.net",
-    "username"=>"bleonagashi",
-    "password" => "bleona123",
-    "role"=>"user"
-  ];
-
-  $users = [$user1, $user2, $user3];
-?>
 </body>
 </html>
 
