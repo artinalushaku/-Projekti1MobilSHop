@@ -1,3 +1,24 @@
+<?php
+
+
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['contactbtn'])) {
+    // Create a new Contact object
+    $contact = new Contact();
+
+    // Set its properties with form data
+    $contact->setFname($_POST['fname']);
+    $contact->setLname($_POST['lname']);
+    $contact->setEmail($_POST['email']);
+    $contact->setSubject($_POST['subject']);
+
+    // Create a ContactRepository and insert the contact
+    $contactRespository = new ContactRespository();
+    $contactRespository->insertContact($contact);
+}
+?>
+
 
 
 <?php
@@ -63,7 +84,11 @@
                "><img src="logo.png" alt=""></a> 
             </div>
             <div class="logo-2">
+<<<<<<< HEAD
                 <a href="nav.php">
+=======
+                <a href="# ">
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="bars.png" alt="">
                 </a>
             </div>
@@ -116,6 +141,9 @@
             </div>
         </div> 
     </div>
+    
+    
+    
     
 
     <div class="last">

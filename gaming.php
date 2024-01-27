@@ -22,7 +22,11 @@
                "><img src="logo2.png" alt=""></a> 
             </div>
             <div class="logo-2">
+<<<<<<< HEAD
                 <a href="nav.php">
+=======
+                <a href="#">
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="bars.png" alt="">
                 </a>
             </div>

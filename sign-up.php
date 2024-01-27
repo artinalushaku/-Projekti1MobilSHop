@@ -1,3 +1,21 @@
+<?php
+    function testGet(){
+        if(isset($_POST['submit'])){
+            $firstname = $_POST['user'];
+            $lastname = $_POST['lname'];
+            $password = $_POST['psw'];
+            $confirm_password = $_POST['c_psw'];
+            echo 'First name: ' . $firstname .
+            '<br> Last Name: ' . $lastname .
+            '<br> Password: ' . $password .
+            '<br> Confirm password: ' . $confirm_password;
+            exit();
+            } else{
+            echo 'Ju nuk keni shtyp butonin RUAJ!';
+        }
+    }
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -7,18 +25,18 @@
 <body>
 
     <div class="container">
-        <form onsubmit="return validateForm()">
+        <form method="POST" onsubmit="return validateForm()">
             <label for="uname"><b>First name</b></label>
-            <input type="text" placeholder="Enter First Name" id="uname" required>
+            <input type="text" placeholder="Enter First Name" id="uname" name='user' required>
     
             <label for="lname"><b>Last Name</b></label>
-            <input type="text" placeholder="Enter Last Name" id="lname" required>
+            <input type="text" placeholder="Enter Last Name" id="lname" name='lname' required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter password" id="psw" required>
+            <input type="password" placeholder="Enter password" id="psw" name='psw' required>
             
             <label for="confirmpsw"><b>Confirm password</b></label>
-            <input type="password" placeholder="Confirm password" id="confirmpsw" required>
+            <input type="password" placeholder="Confirm password" id="confirmpsw" name='c_psw' required>
             
             <button type="submit">Register</button>
             

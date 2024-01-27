@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML>
+=======
+
+
+<!DOCTYPE html>
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +15,7 @@
     
 </head>
 <body>
+    
     <div class="bar">
         <h1>Mbani lidhjen. Përjetojeni inovacionin. Zgjidhni Mobil Shop.
         </h1>
@@ -83,6 +90,7 @@
             Ofertat më të mirat
         </span> 
     </div>
+    </div>
     <div class="offers">
         <div class="box">
             <div class="first">
@@ -91,14 +99,22 @@
                </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
+<<<<<<< HEAD
                 <button><a href="sign-up.php">Shto në shportë</a></button>
             </div>
             <div class="first">
                 <a href="buy2.php">
+=======
+                <button><a href="buy.php">Shto në shportë</a></button>
+            </div>
+            <div class="first">
+                <a href="#">
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 11, 64GB, Black</h3>
                 <h4>549.00 €</h4>
+<<<<<<< HEAD
                 <button><a href="sign-up.php">Shto në shportë</a></button>
             </div>
             <div class="first">
@@ -110,6 +126,19 @@
             </div>
             <div class="first">
                 <a href="buy.php">
+=======
+                <button><a href="buy2.php">Shto në shportë</a></button>
+            </div>
+            <div class="first">
+                <a href="#">
+                    <img src="hyper.webp" alt="">
+                   </a>                 <h3>Kufje HyperX Cloud II, , të kuqe</h3>
+                <h4>29.oo$</h4>
+                <button><a href="buy3.php">Shto në shportë</a></button>
+            </div>
+            <div class="first">
+                <a href="#">
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
@@ -117,7 +146,11 @@
                 <button><a href="sign-up.php">Shto në shportë</a></button>
             </div>
             <div class="first">
+<<<<<<< HEAD
                 <a href="buy2.php">
+=======
+                <a href="#">
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 12, 64GB, Black</h3>
@@ -125,21 +158,33 @@
                 <button><a href="sign-up.php">Shto në shportë</a></button>
             </div>
             <div class="first">
+<<<<<<< HEAD
                 <a href="buy3.php">
+=======
+                <a href="#">
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="hyper.webp" alt="">
                    </a>                  <h3>Kufje HyperX Cloud II, , të kuqe</h3>
                 <h4>70.0$</h4>
                 <button><a href="sign-up.php">Shto në shportë</a></button>
             </div>
             <div class="first">
+<<<<<<< HEAD
                 <a href="buy2.php">
+=======
+                <a href="#">
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="iphone.webp" alt="">
                    </a>                 <h3>Apple iPhone 13, 64GB, red</h3>
                 <h4>999.0$</h4>
                 <button><a href="sign-up.php">Shto në shportë</a></button>
             </div>
             <div class="first">
+<<<<<<< HEAD
                 <a href="buy.php">
+=======
+                <a href="#">
+>>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
