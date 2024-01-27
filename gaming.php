@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php
+session_start();
+function numroVizitat(){
+if (isset( $_SESSION['numro'])){
+$_SESSION['numro']++;
+}else {
+$_SESSION['numro'] = 1;
+}
+return $_SESSION['numro'];
+}
+echo 'Ju keni vizituar faqen: '.numroVizitat().' here<br>';
+echo 'ID e sesionit eshte: '.session_id()
+?>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -22,7 +35,11 @@
                "><img src="logo2.png" alt=""></a> 
             </div>
             <div class="logo-2">
+
+                <a href="nav.php">
+
                 <a href="#">
+
                     <img src="bars.png" alt="">
                 </a>
             </div>
@@ -162,7 +179,7 @@
             </div>
             <div class="div">
                 <h2>Pyetje të shpeshta                </h2>
-                <a href="help.html">Per – Mobil Shop</a>
+                <a href="help.php">Per – Mobil Shop</a>
                 <a href="">Pagesat</a>
                  <a href="">Qeshtjet Teknike</a>
                  <a href="">Transporti</a>
@@ -187,5 +204,5 @@
 
 
 
-</html>
+    </html>
 

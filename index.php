@@ -1,6 +1,22 @@
+<?php
+session_start();
+function numroVizitat(){
+if (isset( $_SESSION['numro'])){
+$_SESSION['numro']++;
+}else {
+$_SESSION['numro'] = 1;
+}
+return $_SESSION['numro'];
+}
+echo 'Ju keni vizituar faqen: '.numroVizitat().' here<br>';
+echo 'ID e sesionit eshte: '.session_id()
+?>
+<!DOCTYPE HTML>
+
 
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,11 +35,11 @@
     <header>
         <div class="container">
             <div class="logo">
-               <a href="index.html
+               <a href="index.php
                "><img src="logo.png" alt=""></a> 
             </div>
             <div class="logo-2">
-                <a href="nav.html">
+                <a href="nav.php">
                     <img src="bars.png" alt="">
                 </a>
             </div>
@@ -95,15 +111,39 @@
                </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
+
+                <button><a href="sign-up.php">Shto në shportë</a></button>
+            </div>
+            <div class="first">
+                <a href="buy2.php">
+
                 <button><a href="buy.php">Shto në shportë</a></button>
             </div>
             <div class="first">
                 <a href="#">
+
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 11, 64GB, Black</h3>
                 <h4>549.00 €</h4>
+<<<<<<< HEAD
                 <button><a href="buy.php">Shto në shportë</a></button>
+=======
+
+                <button><a href="sign-up.php">Shto në shportë</a></button>
+            </div>
+            <div class="first">
+                <a href="buy3.php">
+                    <img src="hyper.webp" alt="">
+                   </a>                 <h3>Kufje HyperX Cloud II, , të kuqe</h3>
+                <h4>29.oo$</h4>
+                <button><a href="sign-up.php">Shto në shportë</a></button>
+            </div>
+            <div class="first">
+                <a href="buy.php">
+
+                <button><a href="buy2.php">Shto në shportë</a></button>
+>>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
             </div>
             <div class="first">
                 <a href="#">
@@ -114,41 +154,78 @@
             </div>
             <div class="first">
                 <a href="#">
+
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
+<<<<<<< HEAD
                 <button><a href="buy.php">Shto në shportë</a></button>
+=======
+                <button><a href="sign-up.php">Shto në shportë</a></button>
+>>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
             </div>
             <div class="first">
+
+                <a href="buy2.php">
+
                 <a href="#">
+
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 12, 64GB, Black</h3>
                 <h4>700.0$</h4>
+<<<<<<< HEAD
                 <button><a href="buy.php">Shto në shportë</a></button>
+=======
+                <button><a href="sign-up.php">Shto në shportë</a></button>
+>>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
             </div>
             <div class="first">
+
+                <a href="buy3.php">
+
                 <a href="#">
+
                     <img src="hyper.webp" alt="">
                    </a>                  <h3>Kufje HyperX Cloud II, , të kuqe</h3>
                 <h4>70.0$</h4>
+<<<<<<< HEAD
                 <button><a href="buy.php">Shto në shportë</a></button>
+=======
+                <button><a href="sign-up.php">Shto në shportë</a></button>
+>>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
             </div>
             <div class="first">
+
+                <a href="buy2.php">
+
                 <a href="#">
+
                     <img src="iphone.webp" alt="">
                    </a>                 <h3>Apple iPhone 13, 64GB, red</h3>
                 <h4>999.0$</h4>
+<<<<<<< HEAD
                 <button><a href="buy.php">Shto në shportë</a></button>
+=======
+                <button><a href="sign-up.php">Shto në shportë</a></button>
+>>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
             </div>
             <div class="first">
+
+                <a href="buy.php">
+
                 <a href="#">
+
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
+<<<<<<< HEAD
                 <button><a href="buy.php">Shto në shportë</a></button>
+=======
+                <button><a href="sign-up.php">Shto në shportë</a></button>
+>>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
             </div>
         </div>
     </div>
