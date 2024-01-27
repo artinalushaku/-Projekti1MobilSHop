@@ -39,7 +39,7 @@
 ?>
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -59,22 +59,22 @@
     <header>
         <div class="container">
             <div class="logo">
-               <a href="index.html
+               <a href="index.php
                "><img src="logo.png" alt=""></a> 
             </div>
             <div class="logo-2">
-                <a href="nav.html">
+                <a href="nav.php">
                     <img src="bars.png" alt="">
                 </a>
             </div>
             <nav>
             
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="gaming.html">Gaming</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="store.php">Store</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="aboutUs.php">About Us</a></li>
+                    <li><a href="gaming.php">Gaming</a></li>
     
     
                 </ul>
@@ -82,7 +82,7 @@
                </nav>
                <div class="sign-in">
                 <a href=""><img src="icons8-add-to-shopping-basket-96.png" alt=""></a>
-                <a href="sign-in.html"><button>Sign In</button></a>
+                <a href="sign-in.php"><button>Sign In</button></a>
                 
             </div>
         </div>
@@ -144,7 +144,7 @@
     <section class="footer">
         <hr>
         <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="logo.png" alt="">
             </a>
         </div>
@@ -237,4 +237,4 @@
 
 </body>
 
-</html>
+    </html>

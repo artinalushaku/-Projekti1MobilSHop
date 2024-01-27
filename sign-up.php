@@ -1,44 +1,4 @@
-<?php
-
-function testPost()
-{
-if(isset($_POST['submit'])){
-    $firstname=$_POST['firstname'];
-    $lastname=$_POST['lastname'];
-    $password=$_POST['password'];
-    $confirm_password=$_POST['confirm_password'];
-    echo 'Firstname:',$firstname,
-    '<br>Lastname:',$lastname,
-    '<br>Password:',$password,
-    '<br>Confirm_password:',$confirm_password;
-}else{
-echo 'Nuk keni shtypur te dhenat qe duhen';
- }
-}
-
-class DatabaseConnection{
-    private $server = "localhost";
-    private $firstname = "root"; 
-    private $lastname = "root";
-    private $password = "";
-    private $confirm_password = "";
-    private $database = "-projekti1Mobil";
-
-    function startConnection(){
-        try{
-            $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->firstname,$this->lastname,$this->password,$this->confirm_password);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $conn;
-        }catch(PDOException $e){
-            echo "Database Connection Failed: " . $e->getMessage();
-            return null;
-        }
-    }
-}
-
-?>
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <title>Document</title>
@@ -47,18 +7,18 @@ class DatabaseConnection{
 <body>
 
     <div class="container">
-        <form onsubmit="return validateForm()" action="connect.php" method="post">
+        <form onsubmit="return validateForm()">
             <label for="uname"><b>First name</b></label>
-            <input type="text" placeholder="Enter First Name" id="uname" required name='firstname'>
+            <input type="text" placeholder="Enter First Name" id="uname" required>
     
             <label for="lname"><b>Last Name</b></label>
-            <input type="text" placeholder="Enter Last Name" id="lname" required name='lastname'>
+            <input type="text" placeholder="Enter Last Name" id="lname" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter password" id="psw" required name='password'>
+            <input type="password" placeholder="Enter password" id="psw" required>
             
             <label for="confirmpsw"><b>Confirm password</b></label>
-            <input type="password" placeholder="Confirm password" id="confirmpsw" required name='confirm_password'>
+            <input type="password" placeholder="Confirm password" id="confirmpsw" required>
             
             <button type="submit">Register</button>
             
@@ -66,11 +26,11 @@ class DatabaseConnection{
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
             
-            <p> Have an account <span><a href="sign-in.html">Sign In</a></span></p>
+            <p> Have an account <span><a href="sign-in.php">Sign In</a></span></p>
         </form>
     </div>
     <div class="close">
-        <a href="index.html"><img src="close.png" alt=""></a>
+        <a href="index.php"><img src="close.png" alt=""></a>
     </div>
     <script>
         function validateForm() {
@@ -105,5 +65,5 @@ class DatabaseConnection{
         }
     </script>
 </body>
-</html>
+    </html>
 
