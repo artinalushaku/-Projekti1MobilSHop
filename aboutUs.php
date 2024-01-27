@@ -1,3 +1,16 @@
+<?php
+session_start();
+function numroVizitat(){
+if (isset( $_SESSION['numro'])){
+$_SESSION['numro']++;
+}else {
+$_SESSION['numro'] = 1;
+}
+return $_SESSION['numro'];
+}
+echo 'Ju keni vizituar faqen: '.numroVizitat().' here<br>';
+echo 'ID e sesionit eshte: '.session_id()
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -24,11 +37,11 @@
             
                 <ul>
                     <li><a href="index.php">Home</a></li>
-<<<<<<< HEAD
+
                     <li><a href="store.php">Store</a></li>
-=======
-                    <li><a href="store.php">Store</a><php
->>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
+
+                    <li><a href="store.php">Store</a><php>
+
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="about.php">About Us</a></li>
                     <li><a href="gaming.php">Gaming</a></li>
