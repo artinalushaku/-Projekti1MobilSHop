@@ -177,7 +177,7 @@
       text-align: center;
     }
     @media only screen and (max-width: 1090px){
-      .build .second img{
+      .build .second  img{
           width: 70%;
           text-align: center;
         }

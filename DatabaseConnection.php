@@ -19,7 +19,7 @@ class DatabaseConnection {
                 echo "Connection failed ";
                 return null;
             } else {
-                echo "Connection successful!";
+                echo "";
             }
         } catch (PDOException $e) {
             echo "Connection failed " . $e->getMessage();
@@ -31,4 +31,5 @@ class DatabaseConnection {
         return $this->conn;
     }
 }
+
 ?>

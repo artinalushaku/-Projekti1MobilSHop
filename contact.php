@@ -1,23 +1,3 @@
-<?php
-
-
-
-// Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['contactbtn'])) {
-    // Create a new Contact object
-    $contact = new Contact();
-
-    // Set its properties with form data
-    $contact->setFname($_POST['fname']);
-    $contact->setLname($_POST['lname']);
-    $contact->setEmail($_POST['email']);
-    $contact->setSubject($_POST['subject']);
-
-    // Create a ContactRepository and insert the contact
-    $contactRespository = new ContactRespository();
-    $contactRespository->insertContact($contact);
-}
-?>
 
 
 

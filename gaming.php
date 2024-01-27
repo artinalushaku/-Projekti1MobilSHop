@@ -89,7 +89,7 @@
         </div>
         <div id="second">
             <header>
-            <h2>Slide Show: shfaqja e imazheve </h2>
+           
             <img name="mySlide" id="slideshow" />
             </header>
             <button onclick="ndrroImg()">Next</button>
