@@ -1,33 +1,14 @@
-<?php
-session_start();
-function numroVizitat(){
-if (isset( $_SESSION['numro'])){
-$_SESSION['numro']++;
-}else {
-$_SESSION['numro'] = 1;
-}
-return $_SESSION['numro'];
-}
-echo 'Ju keni vizituar faqen: '.numroVizitat().' here<br>';
-echo 'ID e sesionit eshte: '.session_id()
-?>
-<!DOCTYPE HTML>
-
-
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    
-    
+   
 </head>
 <body>
-    
     <div class="bar">
         <h1>Mbani lidhjen. Përjetojeni inovacionin. Zgjidhni Mobil Shop.
         </h1>
@@ -49,7 +30,7 @@ echo 'ID e sesionit eshte: '.session_id()
                     <li><a href="index.php">Home</a></li>
                     <li><a href="store.php">Store</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a href="aboutUs.php">About Us</a></li>
+                    <li><a href="about.php">About Us</a></li>
                     <li><a href="gaming.php">Gaming</a></li>
     
     
@@ -58,11 +39,10 @@ echo 'ID e sesionit eshte: '.session_id()
                </nav>
                <div class="sign-in">
                 <a href=""><img src="icons8-add-to-shopping-basket-96.png" alt=""></a>
-                <a href="sign-in.php"><button>Sign In</button></a>
+                <a href="buy.php"><button>Sign In</button></a>
                 
             </div>
         </div>
-        
         
            
        
@@ -81,7 +61,7 @@ echo 'ID e sesionit eshte: '.session_id()
             <h3>Dont have an account
 
              </h3>
-            <button><a href="sign-up.php">Register</a></button>
+            <button><a href="sign-up.html">Register</a></button>
         </div>
         
        
@@ -102,7 +82,6 @@ echo 'ID e sesionit eshte: '.session_id()
             Ofertat më të mirat
         </span> 
     </div>
-    </div>
     <div class="offers">
         <div class="box">
             <div class="first">
@@ -111,125 +90,77 @@ echo 'ID e sesionit eshte: '.session_id()
                </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
-
-                <button><a href="sign-up.php">Shto në shportë</a></button>
-            </div>
-            <div class="first">
-                <a href="buy2.php">
-
                 <button><a href="buy.php">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="#">
-
+                <a href="buy.php">
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 11, 64GB, Black</h3>
                 <h4>549.00 €</h4>
-<<<<<<< HEAD
                 <button><a href="buy.php">Shto në shportë</a></button>
-=======
-
-                <button><a href="sign-up.php">Shto në shportë</a></button>
-            </div>
-            <div class="first">
-                <a href="buy3.php">
-                    <img src="hyper.webp" alt="">
-                   </a>                 <h3>Kufje HyperX Cloud II, , të kuqe</h3>
-                <h4>29.oo$</h4>
-                <button><a href="sign-up.php">Shto në shportë</a></button>
             </div>
             <div class="first">
                 <a href="buy.php">
-
-                <button><a href="buy2.php">Shto në shportë</a></button>
->>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
-            </div>
-            <div class="first">
-                <a href="#">
                     <img src="hyper.webp" alt="">
                    </a>                 <h3>Kufje HyperX Cloud II, , të kuqe</h3>
                 <h4>29.oo$</h4>
                 <button><a href="buy.php">Shto në shportë</a></button>
             </div>
             <div class="first">
-                <a href="#">
-
+                <a href="buy.php">
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
-<<<<<<< HEAD
                 <button><a href="buy.php">Shto në shportë</a></button>
-=======
-                <button><a href="sign-up.php">Shto në shportë</a></button>
->>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
             </div>
             <div class="first">
-
-                <a href="buy2.php">
-
-                <a href="#">
-
+                <a href="buy2.html">
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 12, 64GB, Black</h3>
                 <h4>700.0$</h4>
-<<<<<<< HEAD
-                <button><a href="buy.php">Shto në shportë</a></button>
-=======
-                <button><a href="sign-up.php">Shto në shportë</a></button>
->>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
+                <button><a href="sign-up.html">Shto në shportë</a></button>
             </div>
             <div class="first">
-
-                <a href="buy3.php">
-
-                <a href="#">
-
+                <a href="buy3.html">
                     <img src="hyper.webp" alt="">
                    </a>                  <h3>Kufje HyperX Cloud II, , të kuqe</h3>
                 <h4>70.0$</h4>
-<<<<<<< HEAD
-                <button><a href="buy.php">Shto në shportë</a></button>
-=======
-                <button><a href="sign-up.php">Shto në shportë</a></button>
->>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
+                <button><a href="sign-up.html">Shto në shportë</a></button>
             </div>
             <div class="first">
-
-                <a href="buy2.php">
-
-                <a href="#">
-
+                <a href="buy2.html">
                     <img src="iphone.webp" alt="">
                    </a>                 <h3>Apple iPhone 13, 64GB, red</h3>
                 <h4>999.0$</h4>
-<<<<<<< HEAD
-                <button><a href="buy.php">Shto në shportë</a></button>
-=======
-                <button><a href="sign-up.php">Shto në shportë</a></button>
->>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
+                <button><a href="sign-up.html">Shto në shportë</a></button>
             </div>
             <div class="first">
-
-                <a href="buy.php">
-
-                <a href="#">
-
+                <a href="buy.html">
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
-<<<<<<< HEAD
-                <button><a href="buy.php">Shto në shportë</a></button>
-=======
-                <button><a href="sign-up.php">Shto në shportë</a></button>
->>>>>>> dd3a80fc9a767c48cb31c8f42b7bc44642d8375b
+                <button><a href="sign-up.html">Shto në shportë</a></button>
             </div>
         </div>
     </div>
-           
+    <div class="contanier">
+        <div class="slide">
+            <div class="slider">
+                <img src="11.jpg" alt="" id="one">
+                <img src="22.jpg" alt="" id="two">
+                <img src="33.jpg" alt="" id="three">
+
+            </div>
+            <div class="nav">
+                <a href="#one"></a>
+                <a href="#two"></a>
+                <a href="#three"></a>
+
+            </div>
         </div>
     </div>
     <div class="info">
@@ -263,7 +194,7 @@ echo 'ID e sesionit eshte: '.session_id()
             <h3>You a Gamer</h3>
         </div>
         <div class="div-2">
-            <a href="gaming.php"><button>Gaming</button>  </a>
+            <a href="gaming.html"><button>Gaming</button>  </a>
 
         </div>
         <img src="new.png" alt="">
@@ -272,7 +203,7 @@ echo 'ID e sesionit eshte: '.session_id()
     <section class="footer">
         <hr>
         <div class="logo">
-            <a href="index.php">
+            <a href="index.html">
                 <img src="logo.png" alt="">
             </a>
         </div>
@@ -299,7 +230,7 @@ echo 'ID e sesionit eshte: '.session_id()
 
             </div>
             <div class="div">
-                <h2>Pyetje të shpeshta  </h2>
+                <h2>Pyetje të shpeshta                </h2>
                 <a href="">Per – Mobil Shop</a>
                 <a href="">Pagesat</a>
                  <a href="">Qeshtjet Teknike</a>
@@ -309,7 +240,7 @@ echo 'ID e sesionit eshte: '.session_id()
             <div class="div">
                 <h2>Kontakti               </h2>
                 <a href="">Email-contact@mobilshop.com</a>
-                <a href="">Tel:+383 045 883 697</a>
+                <a href="">Tel:+383 045 883 702</a>
                  <a href="">Prishtinë, Kosovë</a>
                  <a href="">.......</a>
 

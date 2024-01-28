@@ -2,11 +2,13 @@
 <?php
 require_once 'DatabaseConnection.php';
 $database = new DatabaseConnection();
+$database->startConnection();  // Make sure to call startConnection
 $conn = $database->getDb();
 
 $sql = "SELECT * FROM produktet";
 $all_produktet = $conn->query($sql);
 ?>
+
 
 
 <!DOCTYPE html>
