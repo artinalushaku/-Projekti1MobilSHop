@@ -16,7 +16,7 @@ class DatabaseConnection {
                 echo "Connection failed "; 
                 return null;
             } else {
-                echo "Connection successful!";
+                echo "";
             }
              
         } catch (PDOException $e) {

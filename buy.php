@@ -2,7 +2,7 @@
 <?php
 require_once 'DatabaseConnection.php';
 $database = new DatabaseConnection();
-$database->startConnection();  // Make sure to call startConnection
+$database->startConnection();  
 $conn = $database->getDb();
 
 $sql = "SELECT * FROM produktet";
@@ -302,14 +302,16 @@ header ul li:first-child {
        
     </header>
     <?php
+include_once("DatabaseConnection.php");
+
+// Retrieve the connection object
+$conn = $db->getDb();
+
+if (!$conn) {
+    die("Connection failed");
+}
+
 while ($row = $all_produktet->fetch(PDO::FETCH_ASSOC)) {
-    // Your code to process each row
-
-
-
-    
-    
-    
     ?>
     <section class="buys">
         <div class="one">
@@ -318,17 +320,27 @@ while ($row = $all_produktet->fetch(PDO::FETCH_ASSOC)) {
         <div class="second">
             <p class="name"><?php echo $row["name"];?></p>
             <p class="price"><?php echo $row["price"];?></p>
-           <p class="discount"><b><del><?php echo $row["discount"];?></del></b></p>
-            <div class="btn">
-                <button><a href="">Bleje Tani</a></button>
+            <p class="discount"><b><del><?php echo $row["discount"];?></del></b></p>
+
+            <!-- Form for each product -->
+            <form method="post" action="process_order.php">
+                <!-- Hidden input fields to carry product-specific data -->
+                <input type="hidden" name="produktet_id" value="<?php echo $row["produktet_id"];?>">
+                <input type="hidden" name="name" value="<?php echo $row["name"];?>">
+                <input type="hidden" name="price" value="<?php echo $row["price"];?>">
+                <input type="hidden" name="discount" value="<?php echo $row["discount"];?>">
+                <input type="hidden" name="produktet_image" value="<?php echo $row["produktet_image"];?>">
                 
-            </div>
+                <!-- Order now button for each product -->
+                <input type="submit" name="btn" value="Order now">
+            </form>
         </div>
     </section>
-    <?php
-    }
+<?php
+}
+?>
+
     
-    ?>
     
 
     <section class="footer">
