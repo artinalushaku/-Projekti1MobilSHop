@@ -28,6 +28,9 @@ class DatabaseConnection {
     function getDb() {
         return $this->conn;
     }
+    function getConnection() {
+        return $this->conn;
+    }
 }
 
 $db = new DatabaseConnection();
