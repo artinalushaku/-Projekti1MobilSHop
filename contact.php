@@ -1,43 +1,7 @@
 
 
 
-<?php
 
-  if(isset($_POST['contactbtn'])){
-    if(empty($_POST['fname']) || empty($_POST['lname'])|| empty($_POST['email'])){
-      echo '<script>alert("Please fill the required fields!");</script>';
-    }else{
-        
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
-
-
-        include_once 'users.php';
-        $i=0;
-        
-        foreach($users as $user){
-          if($user['fname'] == $fname && $user['lname'] == $lname && $user['email'] == $email){
-            session_start();
-      
-            $_SESSION['fname'] = $fname;
-            $_SESSION['lname'] = $lname;
-            $_SESSION['email'] = $email;
-            $_SESSION['role'] = $user['role'];
-            $_SESSION['loginTime'] = date("H:i:s");
-            header("location:index.php"); 
-            exit();
-          }else{
-            $i++;
-            if($i == sizeof($users)) {
-              echo "Incorrect Name or Last Name or Email";
-              exit();
-            }
-          }
-        }
-    }
-  }
-?>
 
 
 <!DOCTYPE HTML>
@@ -64,11 +28,7 @@
                "><img src="logo.png" alt=""></a> 
             </div>
             <div class="logo-2">
-<<<<<<< HEAD
                 <a href="nav.php">
-=======
-                <a href="# ">
->>>>>>> 12a5fe16dfe9f64a0c31c55a5a1c3af736de3102
                     <img src="bars.png" alt="">
                 </a>
             </div>
@@ -131,7 +91,8 @@
             
           
 <div class="container">
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" onsubmit="validateForm()"; >    
+<form action="" method="POST" onsubmit="return validateForm();">
+   
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
 
@@ -145,6 +106,25 @@
     <label for="subject">Message</label>
     <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px" ></textarea>
     <input type="submit" name="contactbtn" value="Submit">
+    <?php
+require_once('DatabaseConnection.php');
+
+
+$db = new DatabaseConnection();
+
+// Check if the form is submitted
+if (isset($_POST['contactbtn'])) {
+    // Set data using setter methods
+    $db->setFname($_POST['fname']);
+    $db->setLname($_POST['lname']);
+    $db->setEmail($_POST['email']);
+    $db->setSubject($_POST['subject']);
+
+    $db->startConnection();
+
+    $db->insertoDhenat();
+}
+?>
 </div>
 </form>
 </div>
@@ -204,7 +184,7 @@
             let email = document.getElementById('email').value;
             let subject = document.getElementById('subject').value;
 
-            let fnameRegex = /^[a-z ,.'-]+$/i;                                                                                                                       
+            let fnameRegex = /^[A-Z]/;                                                                                                                       
             if (!fnameRegex.test(fname)) {
                 alert('Please enter a valid name.');
                 return false;

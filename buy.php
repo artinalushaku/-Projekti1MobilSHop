@@ -324,6 +324,7 @@ while ($row = $all_produktet->fetch(PDO::FETCH_ASSOC)) {
 
             <!-- Form for each product -->
             <form method="post" action="process_order.php">
+                
                 <!-- Hidden input fields to carry product-specific data -->
                 <input type="hidden" name="produktet_id" value="<?php echo $row["produktet_id"];?>">
                 <input type="hidden" name="name" value="<?php echo $row["name"];?>">
