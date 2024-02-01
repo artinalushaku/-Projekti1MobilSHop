@@ -3,7 +3,7 @@ class DatabaseConnection {
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $db = "-projekti1mobil";
+    private $db = "projektimobilshop";
 
     public function startConnection() {
         try {
@@ -22,6 +22,13 @@ class Studenti {
     private $lastname;
     private $password;
     private $confirm_password;
+
+    public function __construct() {
+        // $this->firstname = $firstname;
+        // $this->lastname = $lastname;
+        // $this->password = $password;
+        // $this->confirm_password = $confirm_password;
+    }
 
     public function setFirstname($firstname) {
         $this->firstname = $firstname;
@@ -62,11 +69,17 @@ class Studenti {
 
 if (isset($_POST['save'])) {
     $regj = new Studenti();
-    $regj->setFirstname($_POST['user']);
+    // $firstname=$regj->setFirstname($_POST['user']);
+   $regj->setFirstname($_POST['user']);
+//    $lasstname=$regj->setLastname($_POST['lname']);
     $regj->setLastname($_POST['lname']);
+    // $password=$regj->setPassword($_POST['psw']);
     $regj->setPassword($_POST['psw']);
+    // $confirm_password=$regj->setConfirmpassword($_POST['c_psw']);
     $regj->setConfirmpassword($_POST['c_psw']);
     $regj->insertoDhenat();
+
+// echo "clicked";
 }
 ?>
 <!DOCTYPE HTML>
@@ -91,7 +104,7 @@ if (isset($_POST['save'])) {
             <label for="confirmpsw"><b>Confirm password</b></label>
             <input type="password" placeholder="Confirm password" id="confirmpsw" name='c_psw' required>
             
-            <button type="submit">Register</button>
+            <button type="submit" name="save">Register</button>
             
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
