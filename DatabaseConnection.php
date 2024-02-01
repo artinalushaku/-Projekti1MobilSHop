@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 
 class DatabaseConnection {
@@ -65,4 +63,3 @@ class DatabaseConnection {
         </script>";
     }
 }
->>>>>>> 90774f0247454a48f9f1e8abb51804af6c61a4d8

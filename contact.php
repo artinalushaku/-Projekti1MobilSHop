@@ -233,9 +233,7 @@ if (isset($_POST['contactbtn'])) {
         $lname = $_POST['lname'];
         $email = $_POST['email'];
 
-        // Assume $users is an array of user data
-        // Example: $users = [ ['fname' => 'John', 'lname' => 'Doe', 'email' => 'john.doe@example.com', 'role' => 'user'] ];
-
+        
         $userFound = false;
 
         foreach ($users as $contacts) {

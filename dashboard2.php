@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,34 +49,39 @@
 
     <table border="1">
              <tr>
-                 <th>fname</th>
-                 <th>lname</th>
-                 <th>email</th>
-                 <th>message</th>
+             <th>id</th>
+                 <th>firstname</th>
+                 <th>lastname</th>
+                 <th>password</th>
+                 <th>confirm_password</th>
+                 <th>role</th>
                  
                  
              </tr>
 
              <?php 
-            include_once 'contactRepository.php';
+            include_once 'usersRepository.php';
 
-            $contactRepository = new contactRepository();
+            $usersRepository = new usersRepository();
             
             // Explicitly start the connection if needed
             $db = new DatabaseConnection();
             $db->startConnection();
             
-            $contacts = $contactRepository->getAllContacts();
-                foreach($contacts as $contact){
+            $users = $usersRepository->getAllUsers();
+                foreach($users as $user){
                     echo 
                     "
                     <tr>
-                        <td>{$contact['fname']}</td>
-                        <td>{$contact['lname']}</td>
-                        <td>{$contact['email']}</td>
-                        <td>{$contact['subject']}</td>
-                        <td><a href='edit.php?fname={$contact['fname']}'>Edit</a></td>
-                        <td><a href='delete.php?fname={$contact['fname']}'>Delete</a></td>
+                        <td>{$user['id']}</td>
+                        <td>{$user['firstname']}</td>
+                        <td>{$user['lastname']}</td>
+                        <td>{$user['password']}</td>
+                        <td>{$user['confirm_password']}</td>
+                        <td>{$user['role']}</td>
+
+                        <td><a href='edit2.php?id={$user['id']}'>Edit</a></td>
+                        <td><a href='delete2.php?id={$user['id']}'>Delete</a></td>
                     </tr>
                     ";
              }
@@ -86,3 +92,4 @@
     </table>
 </body>
 </html>
+

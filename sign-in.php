@@ -18,7 +18,7 @@
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
-                <p>Don't have an account <span><a href="sign-up.html">Register</a></span></p>
+                <p>Don't have an account <span><a href="sign-up.php">Register</a></span></p>
             </form>
         </div>
         <div class="close">

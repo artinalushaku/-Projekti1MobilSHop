@@ -32,7 +32,7 @@ echo 'ID e sesionit eshte: '.session_id()
                "><img src="logo.png" alt=""></a> 
             </div>
             <div class="logo-2">
-                <a href="nav.php">
+                <a href="sign-up.php">
                     <img src="bars.png" alt="">
                 </a>
             </div>
@@ -51,7 +51,7 @@ echo 'ID e sesionit eshte: '.session_id()
                </nav>
                <div class="sign-in">
                 <a href=""><img src="icons8-add-to-shopping-basket-96.png" alt=""></a>
-                <a href="buy.php"><button>Sign In</button></a>
+                <a href="sign-in.php"><button>Sign In</button></a>
                 
             </div>
         </div>
@@ -73,7 +73,7 @@ echo 'ID e sesionit eshte: '.session_id()
             <h3>Dont have an account
 
              </h3>
-            <button><a href="sign-up.html">Register</a></button>
+            <button><a href="sign-up.php">Register</a></button>
         </div>
         
        
@@ -128,26 +128,26 @@ echo 'ID e sesionit eshte: '.session_id()
                 <button><a href="buy.php">Shiko produktet ne stok</a></button>
             </div>
             <div class="first">
-                <a href="buy2.html">
+                <a href="buy.php">
                     <img src="iphone.webp" alt="">
                    </a> 
                 <h3>Apple iPhone 12, 64GB, Black</h3>
                 <h4>700.0$</h4>
-                <button><a href="sign-up.html">Shiko produktet ne stok</a></button>
+                <button><a href="sign-up.php">Shiko produktet ne stok</a></button>
             </div>
             <div class="first">
-                <a href="buy3.html">
+                <a href="buy.php">
                     <img src="hyper.webp" alt="">
                    </a>                  <h3>Kufje HyperX Cloud II, , të kuqe</h3>
                 <h4>70.0$</h4>
-                <button><a href="sign-up.html">Shiko produktet ne stok</a></button>
+                <button><a href="sign-up.php">Shiko produktet ne stok</a></button>
             </div>
             <div class="first">
-                <a href="buy2.html">
+                <a href="buy.php">
                     <img src="iphone.webp" alt="">
                    </a>                 <h3>Apple iPhone 13, 64GB, red</h3>
                 <h4>999.0$</h4>
-                <button><a href="sign-up.html">Shiko produktet ne stok</a></button>
+                <button><a href="sign-up.php">Shiko produktet ne stok</a></button>
             </div>
             <div class="first">
                 <a href="buy.html">
@@ -155,7 +155,7 @@ echo 'ID e sesionit eshte: '.session_id()
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
-                <button><a href="sign-up.html">Shiko produktet ne stok</a></button>
+                <button><a href="sign-up.php">Shiko produktet ne stok</a></button>
             </div>
         </div>
     </div>
@@ -192,7 +192,7 @@ echo 'ID e sesionit eshte: '.session_id()
             <h3>You a Gamer</h3>
         </div>
         <div class="div-2">
-            <a href="gaming.html"><button>Gaming</button>  </a>
+            <a href="gaming.php"><button>Gaming</button>  </a>
 
         </div>
         <img src="new.png" alt="">
@@ -201,7 +201,7 @@ echo 'ID e sesionit eshte: '.session_id()
     <section class="footer">
         <hr>
         <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="logo.png" alt="">
             </a>
         </div>
