@@ -8,14 +8,14 @@ class DatabaseConnection {
     private $conn;
 
     function __construct() {
-        // The constructor doesn't automatically initialize the connection
+        
     }
 
     public function startConnection() {
         try {
             $this->conn = new PDO("mysql:host=$this->host;dbname=$this->db", $this->username, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Database connection successful.";
+            echo "";
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
@@ -24,7 +24,7 @@ class DatabaseConnection {
 
     public function getConnection() {
         if ($this->conn === null) {
-            // If connection is not yet initialized, start it
+         
             $this->startConnection();
         }
 
@@ -49,7 +49,7 @@ class DatabaseConnection {
 
     public function insertoDhenat() {
         if ($this->conn === null) {
-            // If connection is not yet initialized, start it
+       
             $this->startConnection();
         }
 

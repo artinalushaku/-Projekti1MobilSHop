@@ -50,12 +50,43 @@ class contactRepository {
     function getUserByFname($fname){
         $conn = $this->connection;
 
-        $sql = "SELECT * FROM contacts WHERE fname='$fname'";
+        $sql = "SELECT * FROM contacts WHERE fname=?";
 
-        $statement = $conn->query($sql);
+        $statement = $conn->prepare($sql);
+        $statement->execute([$fname]);
         $contacts = $statement->fetch();
 
         return $contacts;
     }
-
+    function updateUser($fname, $lname, $email, $subject) {
+        $conn = $this->connection;
+    
+        $sql = "UPDATE contacts SET lname=?, email=?, subject=? WHERE fname=?";
+    
+        $statement = $conn->prepare($sql);
+    
+        $statement->execute([$lname, $email, $subject, $fname]);
+    
+        echo "<script>alert('Update was successful');</script>";
+    }
+    
+    function deleteUser($fname) {
+        $conn = $this->connection;
+    
+        $sql = "DELETE FROM contacts WHERE fname=?"; // Changed to use 'fname' column
+    
+        $statement = $conn->prepare($sql);
+    
+        $statement->execute([$fname]);
+    
+        echo "<script>alert('Delete was successful'); </script>";
+    }
+    
 }
+
+//  $userRepo = new UserRepository;
+
+//  $userRepo->updateUser('1111','SSS','SSS','SSS','SSS','SSS');
+
+?>
+
