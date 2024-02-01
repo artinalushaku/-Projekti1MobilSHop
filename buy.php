@@ -3,10 +3,10 @@
 require_once 'DatabaseConnection.php';
 $database = new DatabaseConnection();
 $database->startConnection();  
-$conn = $database->getDb();
+$connection = $database->getConnection();
 
 $sql = "SELECT * FROM produktet";
-$all_produktet = $conn->query($sql);
+$all_produktet = $connection->query($sql);
 ?>
 
 
@@ -304,8 +304,11 @@ header ul li:first-child {
     <?php
 include_once("DatabaseConnection.php");
 
+// Create an instance of the DatabaseConnection class
+$database = new DatabaseConnection();
+
 // Retrieve the connection object
-$conn = $db->getDb();
+$conn = $database->getConnection();
 
 if (!$conn) {
     die("Connection failed");

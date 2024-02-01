@@ -1,78 +1,86 @@
-<?php
-session_start();
-include ('sessionverification.php');
-checkAdmin();
 
-// Include the DatabaseConnection class
-include('Databaseconnection.php');
-
-// Create an instance of the DatabaseConnection class
-$databaseConnection = new DatabaseConnection();
-
-// Attempt to start the database connection
-$conn = $databaseConnection->startConnection();
-
-// Fetch user data if the connection is successful
-if ($conn) {
-    function getUsersData($conn)
-    {
-        try {
-            $sql = "SELECT * FROM user";
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-
-            // Fetch all users
-            $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            return $users;
-        } catch (PDOException $e) {
-            // Handle database query error
-            echo "Error: " . $e->getMessage();
-            return array(); // Return an empty array if an error occurs
-        }
-    }
-
-    // Fetch user data
-    $users = getUsersData($conn);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <table >
-    <thead>
-            <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>Lastname</th>
-                <th>Email</th>
-                <th>Role</th>
-            </tr>
-            </thead>
-            <tbody>
-    <?php
-            if (!empty($users)) {
-                // Loop through each user and display their information in a table row
-                foreach ($users as $user) {
-                    echo '<tr>';
-                    echo '<td>' . $user['Id'] . '</td>';
-                    echo '<td>' . $user['Username'] . '</td>';
-                    echo '<td>' . $user['Lastname'] . '</td>';
-                    echo '<td>' . $user['Email'] . '</td>';
-                    echo '<td>' . $user['Role'] . '</td>';
-                    echo '</tr>';
-                }
-            } else {
-                echo '<tr><td colspan="5">No users found</td></tr>';
-            }
-     ?>
-   </tbody>
+    
+
+    <table border="1">
+             <tr>
+                 <th>fname</th>
+                 <th>lname</th>
+                 <th>email</th>
+                 <th>message</th>
+                 
+                 
+             </tr>
+
+             <?php 
+            include_once 'contactRepository.php';
+
+            $contactRepository = new contactRepository();
+            
+            // Explicitly start the connection if needed
+            $db = new DatabaseConnection();
+            $db->startConnection();
+            
+            $contacts = $contactRepository->getAllContacts();
+                foreach($contacts as $contact){
+                    echo 
+                    "
+                    <tr>
+                        <td>{$contact['fname']}</td>
+                        <td>{$contact['lname']}</td>
+                        <td>{$contact['email']}</td>
+                        <td>{$contact['subject']}</td>
+                        <td><a href='edit.php?fname={$contact['fname']}'>Edit</a></td>
+                        <td><a href='delete.php?fname={$contact['fname']}'>Delete</a></td>
+                    </tr>
+                    ";
+             }
+
+             
+             
+             ?>
     </table>
- 
 </body>
 </html>

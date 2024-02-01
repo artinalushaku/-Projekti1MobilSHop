@@ -1,13 +1,15 @@
 <?php
 include_once("DatabaseConnection.php");
 
+// Create an instance of the DatabaseConnection class
+$database = new DatabaseConnection();
+
 // Retrieve the connection object
-$conn = $db->getDb();
+$conn = $database->getConnection();
 
 if (!$conn) {
     die("Connection failed");
 }
-
 if (isset($_POST['btn'])) {
     $produktet_id = $_POST['produktet_id'];
     $name = $_POST['name'];
