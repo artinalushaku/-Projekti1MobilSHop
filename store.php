@@ -36,7 +36,7 @@ echo 'ID e sesionit eshte: '.session_id()
                     <li><a href="index.php">Home</a></li>
                     <li><a href="store.php">Store</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="aboutUs.php">About Us</a></li>
                     <li><a href="gaming.php">Gaming</a></li>
     
     

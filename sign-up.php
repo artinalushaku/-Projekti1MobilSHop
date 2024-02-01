@@ -1,21 +1,74 @@
 <?php
-    function testGet(){
-        if(isset($_POST['submit'])){
-            $firstname = $_POST['user'];
-            $lastname = $_POST['lname'];
-            $password = $_POST['psw'];
-            $confirm_password = $_POST['c_psw'];
-            echo 'First name: ' . $firstname .
-            '<br> Last Name: ' . $lastname .
-            '<br> Password: ' . $password .
-            '<br> Confirm password: ' . $confirm_password;
-            exit();
-            } else{
-            echo 'Ju nuk keni shtyp butonin RUAJ!';
+class DatabaseConnection {
+    private $host = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $db = "-projekti1mobil";
+
+    public function startConnection() {
+        try {
+            $conn = new PDO("mysql:host=$this->host;dbname=$this->db", $this->username, $this->password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $conn;
+        } catch(PDOException $e) {
+            echo "Connection failed " . $e->getMessage();
+            return null;
         }
     }
-?>
+}
 
+class Studenti {
+    private $firstname;
+    private $lastname;
+    private $password;
+    private $confirm_password;
+
+    public function setFirstname($firstname) {
+        $this->firstname = $firstname;
+    }
+
+    public function setLastname($lastname) {
+        $this->lastname = $lastname;
+    }
+
+    public function setPassword($password) {
+        $this->password = $password;
+    }
+
+    public function setConfirmpassword($confirm_password) {
+        $this->confirm_password = $confirm_password;
+    }
+
+    public function insertoDhenat() {
+        $dbConnection = new DatabaseConnection();
+        $conn = $dbConnection->startConnection();
+
+        if ($conn) {
+            try {
+                $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, password) VALUES (:firstname, :lastname, :password)");
+                $stmt->bindParam(':firstname', $this->firstname);
+                $stmt->bindParam(':lastname', $this->lastname);
+                $stmt->bindParam(':password', $this->password); // Note: You should hash the password before storing it in the database for security
+                $stmt->execute();
+                echo "New record created successfully";
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
+        } else {
+            echo "Database connection failed.";
+        }
+    }
+}
+
+if (isset($_POST['save'])) {
+    $regj = new Studenti();
+    $regj->setFirstname($_POST['user']);
+    $regj->setLastname($_POST['lname']);
+    $regj->setPassword($_POST['psw']);
+    $regj->setConfirmpassword($_POST['c_psw']);
+    $regj->insertoDhenat();
+}
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
