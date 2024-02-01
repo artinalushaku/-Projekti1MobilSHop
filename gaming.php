@@ -105,11 +105,10 @@ echo 'ID e sesionit eshte: '.session_id()
                 Ju gjithashtu mund të ofroni paketa konzolash me lojëra dhe aksesorë.</p>
         </div>
         <div id="second">
-            <header>
            
-            <img name="mySlide" id="slideshow" />
-            </header>
-            <button onclick="ndrroImg()">Next</button>
+           
+        <img name="mySlide" id="slideshow" style="width: 700px; height: 440px;" />
+           
             </div>
             
     </div>
@@ -128,12 +127,13 @@ echo 'ID e sesionit eshte: '.session_id()
         } else {
         i = 0;
         }
-        //setTimeout("ndrroImg()", 2600)
+        setTimeout("ndrroImg()", 2600)
+        
         }
         document.body.addEventListener('load', ndrroImg());
         </script>
         
-    
+        
 
 
 

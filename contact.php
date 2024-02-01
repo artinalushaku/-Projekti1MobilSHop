@@ -1,9 +1,4 @@
 
-
-
-
-
-
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -91,7 +86,7 @@
             
           
 <div class="container">
-<form action="" method="POST" onsubmit="return validateForm();">
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" onsubmit="return validateForm();">
    
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="fname" placeholder="Enter First Name" >
@@ -107,7 +102,7 @@
     <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px" ></textarea>
     <input type="submit" name="contactbtn" value="Submit">
     <?php
-require_once('DatabaseConnection.php');
+include_once('DatabaseConnection.php');
 
 
 $db = new DatabaseConnection();
@@ -226,3 +221,40 @@ if (isset($_POST['contactbtn'])) {
 </body>
 
     </html>
+
+    <?php
+session_start();
+
+if (isset($_POST['contactbtn'])) {
+    if (empty($_POST['fname']) || empty($_POST['lname']) || empty($_POST['email'])) {
+        echo '<script>alert("Please fill the required fields!");</script>';
+    } else {
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $email = $_POST['email'];
+
+        // Assume $users is an array of user data
+        // Example: $users = [ ['fname' => 'John', 'lname' => 'Doe', 'email' => 'john.doe@example.com', 'role' => 'user'] ];
+
+        $userFound = false;
+
+        foreach ($users as $contacts) {
+            if ($user['fname'] == $fname && $user['lname'] == $lname && $user['email'] == $email) {
+                $userFound = true;
+
+                $_SESSION['fname'] = $fname;
+                $_SESSION['lname'] = $lname;
+                $_SESSION['email'] = $email;
+                $_SESSION['role'] = $user['role'];
+                $_SESSION['loginTime'] = date("H:i:s");
+                header("location:index.php");
+                exit();
+            }
+        }
+
+        if (!$userFound) {
+            echo "Incorrect Name or Last Name or Email";
+        }
+    }
+}
+?>
