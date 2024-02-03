@@ -73,7 +73,7 @@ class contactRepository {
     function deleteUser($fname) {
         $conn = $this->connection;
     
-        $sql = "DELETE FROM contacts WHERE fname=?"; // Changed to use 'fname' column
+        $sql = "DELETE FROM contacts WHERE fname=?"; 
     
         $statement = $conn->prepare($sql);
     
