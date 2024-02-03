@@ -41,6 +41,7 @@ include_once 'DatabaseConnection2.php'
             let lname = document.getElementById('lname').value;
             let password = document.getElementById('psw').value;
             let confirmPassword = document.getElementById('confirmpsw').value;
+            let role = document.getElementById('role').value;
 
             let nameRegex =/^[A-Z]/;
             if (!nameRegex.test(fname)) {

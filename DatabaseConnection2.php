@@ -1,4 +1,3 @@
-
 <?php
 class DatabaseConnection {
     private $host = "localhost";
@@ -88,3 +87,4 @@ if (isset($_POST['save'])) {
 
 // echo "clicked";
 }
+?>

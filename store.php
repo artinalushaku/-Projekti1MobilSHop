@@ -53,13 +53,6 @@ echo 'ID e sesionit eshte: '.session_id()
            
        
     </header>
-    <div id="kontenti">
-        <header>
-        <h2>Slide Show: shfaqja e imazheve </h2>
-        <img name="mySlide" id="slideshow" />
-        </header>
-        <button onclick="ndrroImg()">Next</button>
-        </div>
    
         
     <div class="search">
