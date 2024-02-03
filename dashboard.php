@@ -61,7 +61,7 @@
 
             $contactRepository = new contactRepository();
             
-            // Explicitly start the connection if needed
+            
             $db = new DatabaseConnection();
             $db->startConnection();
             

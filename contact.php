@@ -107,9 +107,8 @@ include_once('DatabaseConnection.php');
 
 $db = new DatabaseConnection();
 
-// Check if the form is submitted
 if (isset($_POST['contactbtn'])) {
-    // Set data using setter methods
+    
     $db->setFname($_POST['fname']);
     $db->setLname($_POST['lname']);
     $db->setEmail($_POST['email']);
