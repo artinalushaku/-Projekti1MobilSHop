@@ -10,7 +10,7 @@ include_once 'DatabaseConnection2.php'
 <body>
 
     <div class="container">
-        <form method="POST" onsubmit="return validateForm()">
+        <form method="POST" onsubmit="return validateForm()" action="store.php">
             <label for="uname"><b>First name</b></label>
             <input type="text" placeholder="Enter First Name" id="uname" name='user' required>
     
@@ -32,9 +32,7 @@ include_once 'DatabaseConnection2.php'
             <p> Have an account <span><a href="sign-in.php">Sign In</a></span></p>
         </form>
     </div>
-    <div class="close">
-        <a href="index.php"><img src="close.png" alt=""></a>
-    </div>
+    
     <script>
         function validateForm() {
             let fname = document.getElementById('uname').value;

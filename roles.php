@@ -1,6 +1,6 @@
 <?php
 include_once 'users.php'; // Include the repository to get user data
-include_once 'DatabaseConnection.php'; // Include the database connection class
+include_once 'DatabaseConnection2.php'; // Include the database connection class
 
 if (isset($_POST['save'])) {
     // Assuming username and password are posted via form

@@ -24,10 +24,7 @@ class Studenti {
     private $confirm_password;
 
     public function __construct() {
-        // $this->firstname = $firstname;
-        // $this->lastname = $lastname;
-        // $this->password = $password;
-        // $this->confirm_password = $confirm_password;
+        
     }
 
     public function setFirstname($firstname) {
@@ -62,7 +59,7 @@ class Studenti {
                 $stmt->bindParam(':role', $this->role);
     
                 $stmt->execute();
-                echo "New record created successfully";
+                echo "";
             } catch (PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }
@@ -75,16 +72,16 @@ class Studenti {
 
 if (isset($_POST['save'])) {
     $regj = new Studenti();
-    // $firstname=$regj->setFirstname($_POST['user']);
+   
    $regj->setFirstname($_POST['user']);
-//    $lasstname=$regj->setLastname($_POST['lname']);
+
     $regj->setLastname($_POST['lname']);
-    // $password=$regj->setPassword($_POST['psw']);
+    
     $regj->setPassword($_POST['psw']);
-    // $confirm_password=$regj->setConfirmpassword($_POST['c_psw']);
+    
     $regj->setConfirmpassword($_POST['c_psw']);
     $regj->insertoDhenat();
 
-// echo "clicked";
+//echo "clicked";
 }
 ?>

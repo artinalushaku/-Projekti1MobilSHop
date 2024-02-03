@@ -8,8 +8,12 @@ $_SESSION['numro'] = 1;
 }
 return $_SESSION['numro'];
 }
-echo 'Ju keni vizituar faqen: '.numroVizitat().' here<br>';
-echo 'ID e sesionit eshte: '.session_id()
+
+echo '<div style="font-family: Arial, sans-serif; position: fixed; top: 10px; left: 10px; padding: 10px; background-color: #f2f2f2; border: 1px solid #ddd; border-radius: 5px; font-size: 12px; color: #333;">';
+echo 'Ju keni vizituar faqen: <strong>' . numroVizitat() . '</strong> here<br>';
+echo 'ID e sesionit eshte: <strong>' . session_id() . '</strong>';
+echo '</div>';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,29 +137,29 @@ echo 'ID e sesionit eshte: '.session_id()
                    </a> 
                 <h3>Apple iPhone 12, 64GB, Black</h3>
                 <h4>700.0$</h4>
-                <button><a href="sign-up.php">Shiko produktet ne stok</a></button>
+                <button><a href="buy.php">Shiko produktet ne stok</a></button>
             </div>
             <div class="first">
                 <a href="buy.php">
                     <img src="hyper.webp" alt="">
                    </a>                  <h3>Kufje HyperX Cloud II, , të kuqe</h3>
                 <h4>70.0$</h4>
-                <button><a href="sign-up.php">Shiko produktet ne stok</a></button>
+                <button><a href="buy.php">Shiko produktet ne stok</a></button>
             </div>
             <div class="first">
                 <a href="buy.php">
                     <img src="iphone.webp" alt="">
                    </a>                 <h3>Apple iPhone 13, 64GB, red</h3>
                 <h4>999.0$</h4>
-                <button><a href="sign-up.php">Shiko produktet ne stok</a></button>
+                <button><a href="buy.php">Shiko produktet ne stok</a></button>
             </div>
             <div class="first">
-                <a href="buy.html">
+                <a href="buy.php">
                     <img src="download.webp" alt="">
                    </a> 
                 <h3>Apple MacBook Air 13.3"</h3>
                 <h4>999.0$</h4>
-                <button><a href="sign-up.php">Shiko produktet ne stok</a></button>
+                <button><a href="buy.php">Shiko produktet ne stok</a></button>
             </div>
         </div>
     </div>

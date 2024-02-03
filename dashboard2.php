@@ -62,7 +62,7 @@
 
             $usersRepository = new usersRepository();
             
-            // Explicitly start the connection if needed
+           
             $db = new DatabaseConnection();
             $db->startConnection();
             

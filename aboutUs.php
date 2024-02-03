@@ -8,8 +8,11 @@ $_SESSION['numro'] = 1;
 }
 return $_SESSION['numro'];
 }
-echo 'Ju keni vizituar faqen: '.numroVizitat().' here<br>';
-echo 'ID e sesionit eshte: '.session_id()
+echo '<div style="font-family: Arial, sans-serif; position: fixed; top: 10px; left: 10px; padding: 10px; background-color: #f2f2f2; border: 1px solid #ddd; border-radius: 5px; font-size: 12px; color: #333;">';
+echo 'Ju keni vizituar faqen: <strong>' . numroVizitat() . '</strong> here<br>';
+echo 'ID e sesionit eshte: <strong>' . session_id() . '</strong>';
+echo '</div>';
+
 ?>
 <!DOCTYPE HTML>
 <html>

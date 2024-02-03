@@ -1,10 +1,10 @@
 <?php
 include_once("DatabaseConnection.php");
 
-// Create an instance of the DatabaseConnection class
+
 $database = new DatabaseConnection();
 
-// Retrieve the connection object
+
 $conn = $database->getConnection();
 
 if (!$conn) {
@@ -18,14 +18,14 @@ if (isset($_POST['btn'])) {
     $produktet_image = $_POST['produktet_image'];
 
     try {
-        // Insert the product-specific data into the "bleje" table
+      
         $sql = "INSERT INTO bleje (id, name, price, discount, image)
                 VALUES ('$produktet_id', '$name', '$price', '$discount', '$produktet_image')";
 
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
-        echo "!";
+       
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
@@ -56,7 +56,7 @@ if (isset($_POST['btn'])) {
         // Adjust the display time (in milliseconds)
         setTimeout(function () {
             notification.style.display = "none";
-        }, 30000); // 3000 milliseconds = 3 seconds
+        }, 30000); 
     });
 </script>
 
